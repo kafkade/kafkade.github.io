@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" width="1920" height="400">
+  <!-- Banner for Buy Me a Coffee — 1920x400 -->
+  <rect width="1920" height="400" fill="#010221"/>
+
+  <!-- Mountain range -->
+  <path d="M 0,400 L 300,280 L 500,340 L 750,230 L 950,310 L 1150,220 L 1400,290 L 1650,250 L 1920,300 L 1920,400 Z" fill="#0A7373" opacity="0.06"/>
+
+  <!-- Terminal (left) -->
+  <rect x="100" y="55" width="420" height="290" rx="14" fill="#0A7373" opacity="0.12"/>
+  <rect x="100" y="55" width="420" height="32" rx="14" fill="#0A7373" opacity="0.2"/>
+  <rect x="100" y="77" width="420" height="268" fill="#0A7373" opacity="0.12"/>
+  <circle cx="124" cy="71" r="5" fill="#C43302" opacity="0.8"/>
+  <circle cx="140" cy="71" r="5" fill="#EDAA25" opacity="0.8"/>
+  <circle cx="156" cy="71" r="5" fill="#0A7373" opacity="0.8"/>
+  <rect x="126" y="98" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="146" y="98" width="90" height="5" rx="1" fill="#E8E8E0" opacity="0.4"/>
+  <rect x="126" y="112" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="146" y="112" width="60" height="5" rx="1" fill="#EDAA25" opacity="0.5"/>
+  <rect x="126" y="126" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="146" y="126" width="110" height="5" rx="1" fill="#C43302" opacity="0.4"/>
+  <rect x="126" y="140" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="146" y="140" width="40" height="5" rx="1" fill="#0A7373" opacity="0.6"/>
+  <rect x="126" y="154" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="146" y="154" width="5" height="5" rx="1" fill="#EDAA25"/>
+
+  <!-- Name + tagline (center) -->
+  <text x="660" y="195" font-family="monospace" font-size="56" font-weight="700" fill="#E8E8E0">kafkade</text>
+  <text x="660" y="238" font-family="monospace" font-size="20" fill="#C43302">Code. Craft. Cascade.</text>
+
+  <!-- Chevrons (right) -->
+  <path d="M 1680,250 L 1730,216 L 1780,250" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.15"/>
+  <path d="M 1688,234 L 1730,206 L 1772,234" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M 1696,218 L 1730,196 L 1764,218" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 1704,202 L 1730,184 L 1756,202" stroke="#0A7373" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="1730" cy="180" r="3.5" fill="#EDAA25"/>
+</svg>

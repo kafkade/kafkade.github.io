@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>kafkade — Avatar Proposals</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "JetBrains Mono", monospace;
+      background: #F8F7F4;
+      color: #1A1A2E;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; }
+    p.sub { color: #6B6B7B; font-size: 0.8rem; margin-bottom: 2rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .card { text-align: center; }
+    .card svg { width: 160px; height: 160px; margin-bottom: 0.75rem; }
+    .card h3 { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .card p { font-size: 0.7rem; color: #6B6B7B; line-height: 1.5; }
+
+    /* Dark bg preview row */
+    .dark-row {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #010221;
+      border-top: 2px solid #0A7373;
+    }
+    .dark-row h2 { color: #0A7373; font-size: 0.9rem; margin-bottom: 1rem; }
+    .dark-row .grid-sm {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .dark-row .grid-sm svg { width: 80px; height: 80px; }
+  </style>
+</head>
+<body>
+  <h1>kafkade — Avatar Proposals (Round 2)</h1>
+  <p class="sub">All silhouette-based. Shown at 160px on light bg, then 80px on dark bg below to test small-size readability.</p>
+
+  <div class="grid">
+
+    <!-- 1: Developer at Desk -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Mountains bg -->
+        <path d="M 0,160 L 50,110 L 80,130 L 120,90 L 160,120 L 200,95 L 200,200 L 0,200 Z" fill="#0A7373" opacity="0.12"/>
+        <!-- Person silhouette -->
+        <circle cx="100" cy="68" r="16" fill="#E8E8E0"/>
+        <path d="M 72,84 Q 100,80 128,84 L 134,135 L 66,135 Z" fill="#E8E8E0"/>
+        <!-- Desk surface -->
+        <rect x="40" y="135" width="120" height="4" rx="1" fill="#B7BF99" opacity="0.5"/>
+        <!-- Laptop -->
+        <path d="M 75,115 L 78,95 L 122,95 L 125,115 Z" fill="#0A7373" opacity="0.8"/>
+        <rect x="82" y="99" width="36" height="12" rx="1" fill="#010221"/>
+        <rect x="85" y="101" width="12" height="1.5" rx="0.5" fill="#EDAA25" opacity="0.8"/>
+        <rect x="85" y="104" width="20" height="1.5" rx="0.5" fill="#0A7373" opacity="0.6"/>
+        <rect x="85" y="107" width="8" height="1.5" rx="0.5" fill="#C43302" opacity="0.5"/>
+        <rect x="70" y="115" width="60" height="3" rx="1" fill="#0A7373" opacity="0.6"/>
+        <!-- Summit dot -->
+        <circle cx="100" cy="42" r="4" fill="#EDAA25"/>
+      </svg>
+      <h3>#1 — Dev at Desk</h3>
+      <p>White silhouette at laptop. Mountains behind. Code on screen. Amber summit dot.</p>
+    </div>
+
+    <!-- 2: Terminal Prompt -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Terminal window -->
+        <rect x="30" y="40" width="140" height="120" rx="8" fill="#0A7373" opacity="0.15"/>
+        <rect x="30" y="40" width="140" height="20" rx="8" fill="#0A7373" opacity="0.25"/>
+        <rect x="30" y="52" width="140" height="108" fill="#0A7373" opacity="0.15"/>
+        <!-- Window dots -->
+        <circle cx="44" cy="50" r="3" fill="#C43302" opacity="0.8"/>
+        <circle cx="54" cy="50" r="3" fill="#EDAA25" opacity="0.8"/>
+        <circle cx="64" cy="50" r="3" fill="#0A7373" opacity="0.8"/>
+        <!-- Terminal text -->
+        <rect x="42" y="68" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/>
+        <rect x="54" y="68" width="50" height="3" rx="1" fill="#E8E8E0" opacity="0.5"/>
+        <rect x="42" y="78" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/>
+        <rect x="54" y="78" width="35" height="3" rx="1" fill="#EDAA25" opacity="0.6"/>
+        <rect x="42" y="88" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/>
+        <rect x="54" y="88" width="60" height="3" rx="1" fill="#C43302" opacity="0.5"/>
+        <rect x="42" y="98" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/>
+        <rect x="54" y="98" width="20" height="3" rx="1" fill="#0A7373" opacity="0.7"/>
+        <rect x="42" y="108" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/>
+        <rect x="54" y="108" width="45" height="3" rx="1" fill="#E8E8E0" opacity="0.4"/>
+        <!-- Cursor blink -->
+        <rect x="42" y="120" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/>
+        <rect x="54" y="120" width="3" height="3" rx="0.5" fill="#EDAA25"/>
+        <!-- Chevrons subtle -->
+        <path d="M 80,170 L 100,160 L 120,170" stroke="#0A7373" stroke-width="1.5" fill="none" opacity="0.2" stroke-linecap="round"/>
+        <path d="M 85,175 L 100,167 L 115,175" stroke="#0A7373" stroke-width="1.5" fill="none" opacity="0.35" stroke-linecap="round"/>
+      </svg>
+      <h3>#2 — Terminal</h3>
+      <p>Terminal window with colored code lines. Cursor blinking. Pure developer icon.</p>
+    </div>
+
+    <!-- 3: Chevron Badge -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Large stacked chevrons centered -->
+        <path d="M 50,140 L 100,90 L 150,140" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.2"/>
+        <path d="M 58,125 L 100,75 L 142,125" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+        <path d="M 66,110 L 100,60 L 134,110" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+        <path d="M 74,95 L 100,48 L 126,95" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Summit -->
+        <circle cx="100" cy="42" r="6" fill="#EDAA25"/>
+        <!-- Subtle text below -->
+        <text x="100" y="168" text-anchor="middle" font-family="monospace" font-size="14" fill="#B7BF99" opacity="0.4">kafkade</text>
+      </svg>
+      <h3>#3 — Chevron Badge</h3>
+      <p>The stacked chevrons logo as the full avatar. Bold, recognizable, brand-first.</p>
+    </div>
+
+    <!-- 4: Head with Code Pattern -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Head silhouette -->
+        <circle cx="100" cy="88" r="42" fill="#E8E8E0"/>
+        <!-- Code pattern inside head (brain = code) -->
+        <rect x="78" y="72" width="18" height="2.5" rx="1" fill="#010221" opacity="0.3"/>
+        <rect x="78" y="78" width="30" height="2.5" rx="1" fill="#0A7373" opacity="0.4"/>
+        <rect x="78" y="84" width="12" height="2.5" rx="1" fill="#C43302" opacity="0.3"/>
+        <rect x="78" y="90" width="44" height="2.5" rx="1" fill="#EDAA25" opacity="0.3"/>
+        <rect x="78" y="96" width="22" height="2.5" rx="1" fill="#0A7373" opacity="0.4"/>
+        <rect x="78" y="102" width="35" height="2.5" rx="1" fill="#010221" opacity="0.3"/>
+        <!-- Shoulders -->
+        <path d="M 50,150 Q 55,128 100,125 Q 145,128 150,150 L 155,200 L 45,200 Z" fill="#E8E8E0"/>
+        <!-- Summit dot -->
+        <circle cx="100" cy="38" r="4" fill="#EDAA25"/>
+      </svg>
+      <h3>#4 — Code Mind</h3>
+      <p>Head filled with code lines instead of features. You are what you build.</p>
+    </div>
+
+    <!-- 5: Mountain Person -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Person IS the mountain -->
+        <path d="M 40,180 L 100,40 L 160,180 Z" fill="#0A7373"/>
+        <!-- Face cutout circle -->
+        <circle cx="100" cy="72" r="18" fill="#010221"/>
+        <!-- Eyes -->
+        <circle cx="93" cy="72" r="2" fill="#E8E8E0"/>
+        <circle cx="107" cy="72" r="2" fill="#E8E8E0"/>
+        <!-- Summit dot -->
+        <circle cx="100" cy="35" r="4.5" fill="#EDAA25"/>
+        <!-- Ridge lines on body/mountain -->
+        <line x1="60" y1="140" x2="140" y2="140" stroke="#010221" stroke-width="1" opacity="0.2"/>
+        <line x1="70" y1="120" x2="130" y2="120" stroke="#010221" stroke-width="1" opacity="0.2"/>
+        <line x1="80" y1="100" x2="120" y2="100" stroke="#010221" stroke-width="1" opacity="0.2"/>
+      </svg>
+      <h3>#5 — Mountain Person</h3>
+      <p>The person IS the mountain. Teal triangle body, face cutout, amber summit. Iconic.</p>
+    </div>
+
+    <!-- 6: Bracket Avatar -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Code brackets framing a person -->
+        <text x="40" y="130" font-family="monospace" font-size="80" font-weight="700" fill="#0A7373" opacity="0.6">{</text>
+        <text x="135" y="130" font-family="monospace" font-size="80" font-weight="700" fill="#0A7373" opacity="0.6">}</text>
+        <!-- Person silhouette inside brackets -->
+        <circle cx="100" cy="75" r="14" fill="#E8E8E0"/>
+        <path d="M 80,89 Q 100,86 120,89 L 124,130 L 76,130 Z" fill="#E8E8E0"/>
+        <!-- Summit dot -->
+        <circle cx="100" cy="50" r="3.5" fill="#EDAA25"/>
+      </svg>
+      <h3>#6 — { Developer }</h3>
+      <p>Person framed by code brackets. Literal "developer identity" statement.</p>
+    </div>
+
+    <!-- 7: Minimal Initials -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Large "k" in monospace, stylized -->
+        <text x="55" y="145" font-family="monospace" font-size="120" font-weight="700" fill="#0A7373">k</text>
+        <!-- Mountain peak formed by the k's ascender -->
+        <circle cx="100" cy="42" r="5" fill="#EDAA25"/>
+        <!-- Chevron behind -->
+        <path d="M 70,170 L 100,148 L 130,170" stroke="#B7BF99" stroke-width="2" fill="none" opacity="0.2" stroke-linecap="round"/>
+      </svg>
+      <h3>#7 — Monospace "k"</h3>
+      <p>Single lowercase "k" in monospace. Minimal, typographic, unmistakable.</p>
+    </div>
+
+    <!-- 8: Ghost in the Shell -->
+    <div class="card">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" rx="20" fill="#010221"/>
+        <!-- Head outline only — no fill, wireframe style -->
+        <circle cx="100" cy="82" r="35" stroke="#0A7373" stroke-width="2.5" fill="none"/>
+        <!-- Scan lines across head -->
+        <line x1="70" y1="70" x2="130" y2="70" stroke="#0A7373" stroke-width="1" opacity="0.2"/>
+        <line x1="68" y1="78" x2="132" y2="78" stroke="#0A7373" stroke-width="1" opacity="0.2"/>
+        <line x1="66" y1="86" x2="134" y2="86" stroke="#0A7373" stroke-width="1" opacity="0.2"/>
+        <line x1="68" y1="94" x2="132" y2="94" stroke="#0A7373" stroke-width="1" opacity="0.2"/>
+        <line x1="70" y1="102" x2="130" y2="102" stroke="#0A7373" stroke-width="1" opacity="0.2"/>
+        <!-- Eyes — glowing dots -->
+        <circle cx="88" cy="82" r="4" fill="#EDAA25"/>
+        <circle cx="112" cy="82" r="4" fill="#EDAA25"/>
+        <!-- Neck/body wireframe -->
+        <line x1="100" y1="117" x2="100" y2="140" stroke="#0A7373" stroke-width="2" opacity="0.5"/>
+        <path d="M 60,170 Q 65,140 100,140 Q 135,140 140,170" stroke="#0A7373" stroke-width="2.5" fill="none" opacity="0.6"/>
+        <!-- Summit -->
+        <circle cx="100" cy="40" r="3.5" fill="#EDAA25"/>
+      </svg>
+      <h3>#8 — Wireframe</h3>
+      <p>Wireframe head with scan lines and glowing amber eyes. Digital, mysterious, technical.</p>
+    </div>
+
+  </div>
+
+  <!-- Small size test on dark -->
+  <div class="dark-row">
+    <h2>// Small size test (80px on dark bg)</h2>
+    <div class="grid-sm">
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><path d="M 0,160 L 50,110 L 80,130 L 120,90 L 160,120 L 200,95 L 200,200 L 0,200 Z" fill="#0A7373" opacity="0.12"/><circle cx="100" cy="68" r="16" fill="#E8E8E0"/><path d="M 72,84 Q 100,80 128,84 L 134,135 L 66,135 Z" fill="#E8E8E0"/><rect x="40" y="135" width="120" height="4" rx="1" fill="#B7BF99" opacity="0.5"/><path d="M 75,115 L 78,95 L 122,95 L 125,115 Z" fill="#0A7373" opacity="0.8"/><rect x="82" y="99" width="36" height="12" rx="1" fill="#010221"/><rect x="70" y="115" width="60" height="3" rx="1" fill="#0A7373" opacity="0.6"/><circle cx="100" cy="42" r="4" fill="#EDAA25"/></svg>
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><rect x="30" y="40" width="140" height="120" rx="8" fill="#0A7373" opacity="0.15"/><rect x="30" y="40" width="140" height="20" rx="8" fill="#0A7373" opacity="0.25"/><rect x="30" y="52" width="140" height="108" fill="#0A7373" opacity="0.15"/><circle cx="44" cy="50" r="3" fill="#C43302" opacity="0.8"/><circle cx="54" cy="50" r="3" fill="#EDAA25" opacity="0.8"/><circle cx="64" cy="50" r="3" fill="#0A7373" opacity="0.8"/><rect x="42" y="68" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/><rect x="54" y="68" width="50" height="3" rx="1" fill="#E8E8E0" opacity="0.5"/><rect x="42" y="78" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/><rect x="54" y="78" width="35" height="3" rx="1" fill="#EDAA25" opacity="0.6"/><rect x="42" y="88" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/><rect x="54" y="88" width="60" height="3" rx="1" fill="#C43302" opacity="0.5"/><rect x="42" y="120" width="8" height="3" rx="1" fill="#B7BF99" opacity="0.7"/><rect x="54" y="120" width="3" height="3" rx="0.5" fill="#EDAA25"/></svg>
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><path d="M 50,140 L 100,90 L 150,140" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.2"/><path d="M 58,125 L 100,75 L 142,125" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.4"/><path d="M 66,110 L 100,60 L 134,110" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/><path d="M 74,95 L 100,48 L 126,95" stroke="#0A7373" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="100" cy="42" r="6" fill="#EDAA25"/></svg>
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><circle cx="100" cy="88" r="42" fill="#E8E8E0"/><rect x="78" y="72" width="18" height="2.5" rx="1" fill="#010221" opacity="0.3"/><rect x="78" y="78" width="30" height="2.5" rx="1" fill="#0A7373" opacity="0.4"/><rect x="78" y="84" width="12" height="2.5" rx="1" fill="#C43302" opacity="0.3"/><rect x="78" y="90" width="44" height="2.5" rx="1" fill="#EDAA25" opacity="0.3"/><rect x="78" y="96" width="22" height="2.5" rx="1" fill="#0A7373" opacity="0.4"/><rect x="78" y="102" width="35" height="2.5" rx="1" fill="#010221" opacity="0.3"/><path d="M 50,150 Q 55,128 100,125 Q 145,128 150,150 L 155,200 L 45,200 Z" fill="#E8E8E0"/><circle cx="100" cy="38" r="4" fill="#EDAA25"/></svg>
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><path d="M 40,180 L 100,40 L 160,180 Z" fill="#0A7373"/><circle cx="100" cy="72" r="18" fill="#010221"/><circle cx="93" cy="72" r="2" fill="#E8E8E0"/><circle cx="107" cy="72" r="2" fill="#E8E8E0"/><circle cx="100" cy="35" r="4.5" fill="#EDAA25"/></svg>
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><text x="40" y="130" font-family="monospace" font-size="80" font-weight="700" fill="#0A7373" opacity="0.6">{</text><text x="135" y="130" font-family="monospace" font-size="80" font-weight="700" fill="#0A7373" opacity="0.6">}</text><circle cx="100" cy="75" r="14" fill="#E8E8E0"/><path d="M 80,89 Q 100,86 120,89 L 124,130 L 76,130 Z" fill="#E8E8E0"/><circle cx="100" cy="50" r="3.5" fill="#EDAA25"/></svg>
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><text x="55" y="145" font-family="monospace" font-size="120" font-weight="700" fill="#0A7373">k</text><circle cx="100" cy="42" r="5" fill="#EDAA25"/></svg>
+      <svg viewBox="0 0 200 200"><rect width="200" height="200" rx="20" fill="#010221"/><circle cx="100" cy="82" r="35" stroke="#0A7373" stroke-width="2.5" fill="none"/><line x1="70" y1="70" x2="130" y2="70" stroke="#0A7373" stroke-width="1" opacity="0.2"/><line x1="68" y1="78" x2="132" y2="78" stroke="#0A7373" stroke-width="1" opacity="0.2"/><line x1="66" y1="86" x2="134" y2="86" stroke="#0A7373" stroke-width="1" opacity="0.2"/><line x1="68" y1="94" x2="132" y2="94" stroke="#0A7373" stroke-width="1" opacity="0.2"/><circle cx="88" cy="82" r="4" fill="#EDAA25"/><circle cx="112" cy="82" r="4" fill="#EDAA25"/><line x1="100" y1="117" x2="100" y2="140" stroke="#0A7373" stroke-width="2" opacity="0.5"/><path d="M 60,170 Q 65,140 100,140 Q 135,140 140,170" stroke="#0A7373" stroke-width="2.5" fill="none" opacity="0.6"/><circle cx="100" cy="40" r="3.5" fill="#EDAA25"/></svg>
+    </div>
+  </div>
+
+</body>
+</html>

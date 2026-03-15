@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <!-- Banner for GitHub profile README — 1280x640 -->
+  <rect width="1280" height="640" fill="#010221"/>
+
+  <!-- Mountain range -->
+  <path d="M 0,640 L 200,440 L 380,520 L 550,380 L 720,460 L 900,350 L 1050,430 L 1200,380 L 1280,420 L 1280,640 Z" fill="#0A7373" opacity="0.06"/>
+
+  <!-- Terminal window (centered, larger) -->
+  <rect x="140" y="100" width="500" height="440" rx="20" fill="#0A7373" opacity="0.12"/>
+  <rect x="140" y="100" width="500" height="44" rx="20" fill="#0A7373" opacity="0.2"/>
+  <rect x="140" y="132" width="500" height="408" fill="#0A7373" opacity="0.12"/>
+  <circle cx="172" cy="122" r="7" fill="#C43302" opacity="0.8"/>
+  <circle cx="194" cy="122" r="7" fill="#EDAA25" opacity="0.8"/>
+  <circle cx="216" cy="122" r="7" fill="#0A7373" opacity="0.8"/>
+
+  <!-- Code lines -->
+  <rect x="174" y="166" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="166" width="140" height="7" rx="1.5" fill="#E8E8E0" opacity="0.45"/>
+  <rect x="174" y="190" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="190" width="95" height="7" rx="1.5" fill="#EDAA25" opacity="0.55"/>
+  <rect x="174" y="214" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="214" width="180" height="7" rx="1.5" fill="#C43302" opacity="0.45"/>
+  <rect x="174" y="238" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="238" width="60" height="7" rx="1.5" fill="#0A7373" opacity="0.65"/>
+  <rect x="174" y="262" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="262" width="120" height="7" rx="1.5" fill="#E8E8E0" opacity="0.35"/>
+  <rect x="174" y="286" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="286" width="85" height="7" rx="1.5" fill="#EDAA25" opacity="0.45"/>
+  <rect x="174" y="310" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="310" width="200" height="7" rx="1.5" fill="#0A7373" opacity="0.45"/>
+  <!-- Cursor -->
+  <rect x="174" y="340" width="20" height="7" rx="1.5" fill="#B7BF99" opacity="0.65"/>
+  <rect x="202" y="340" width="8" height="7" rx="1" fill="#EDAA25"/>
+
+  <!-- Name + tagline (right side) -->
+  <text x="740" y="280" font-family="monospace" font-size="72" font-weight="700" fill="#E8E8E0">kafkade</text>
+  <text x="740" y="340" font-family="monospace" font-size="24" fill="#C43302">Code. Craft. Cascade.</text>
+  <text x="740" y="390" font-family="monospace" font-size="16" fill="#B7BF99" opacity="0.6">Software creator · Pacific Northwest</text>
+
+  <!-- Stacked chevrons (bottom right) -->
+  <path d="M 1050,520 L 1110,480 L 1170,520" stroke="#0A7373" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.15"/>
+  <path d="M 1060,500 L 1110,466 L 1160,500" stroke="#0A7373" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M 1070,480 L 1110,452 L 1150,480" stroke="#0A7373" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 1080,460 L 1110,438 L 1140,460" stroke="#0A7373" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="1110" cy="432" r="5" fill="#EDAA25"/>
+</svg>
