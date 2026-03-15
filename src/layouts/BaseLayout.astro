@@ -49,10 +49,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <!-- Theme initialization (prevent flash) -->
+    <!-- Theme initialization — clear legacy dark preference, force light -->
     <script is:inline>
-      const theme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.removeItem('theme');
     </script>
   </head>
   <body class="min-h-screen flex flex-col antialiased">
