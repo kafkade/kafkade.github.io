@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- 7: Abstract Cascade Flow — Three flowing diagonal lines suggesting falling water -->
-  <path d="M 8,4 C 8,12 16,14 16,22 L 16,28" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <path d="M 14,4 C 14,12 22,14 22,22 L 22,28" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-  <path d="M 20,4 C 20,12 28,14 28,22 L 28,28" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.3"/>
-  <circle cx="8" cy="3" r="1.5" fill="#EDAA25"/>
-</svg>

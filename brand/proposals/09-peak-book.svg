@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- 9: Peak + Book Pages — Open book where spines form a mountain ridge -->
-  <path d="M 4,26 C 4,20 14,18 16,6" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <path d="M 28,26 C 28,20 18,18 16,6" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <line x1="16" y1="6" x2="16" y2="28" stroke="#0A7373" stroke-width="1" opacity="0.3" stroke-dasharray="2 2"/>
-  <circle cx="16" cy="5" r="1.5" fill="#EDAA25"/>
-</svg>
