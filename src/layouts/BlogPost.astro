@@ -29,25 +29,21 @@ const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
 
 <BaseLayout title={`${title} — kafkade`} description={description}>
   <Header />
-  <main class="flex-1 mx-auto w-full max-w-2xl px-6 py-12">
-    <article>
-      <header class="mb-10">
-        <h1 class="font-display text-3xl sm:text-4xl font-semibold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] mb-4 tracking-tight leading-tight">
+  <main class="flex-1 max-w-[720px] mx-auto w-full px-6">
+    <article class="py-8">
+      <header class="mb-8">
+        <h1 class="text-[1.6rem] sm:text-[2rem] font-bold leading-tight mb-3">
           {title}
         </h1>
-        <div class="flex items-center gap-4 text-sm text-[--color-sage]">
+        <div class="text-[0.8rem] text-[--color-sage]">
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
           {updatedDate && (
-            <span>· Updated {formattedUpdate}</span>
+            <span> · Updated {formattedUpdate}</span>
           )}
         </div>
         {tags.length > 0 && (
-          <div class="flex flex-wrap gap-2 mt-4">
-            {tags.map((tag) => (
-              <span class="text-xs px-2.5 py-1 rounded-full bg-[--color-teal]/10 text-[--color-teal]">
-                {tag}
-              </span>
-            ))}
+          <div class="mt-2 text-[0.8rem] text-[--color-sage]">
+            {tags.join(' · ')}
           </div>
         )}
       </header>
@@ -62,34 +58,25 @@ const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
 
 <style>
   .prose {
-    font-family: var(--font-body);
-    line-height: 1.8;
-    color: var(--color-text-dark);
-  }
-
-  :global(html[data-theme="light"]) .prose {
-    color: var(--color-text-light);
+    line-height: 1.75;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
   }
 
   .prose :global(h2) {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-text-dark);
-  }
-
-  :global(html[data-theme="light"]) .prose :global(h2) {
-    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
   }
 
   .prose :global(h3) {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     margin-top: 2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
   }
 
   .prose :global(p) {
@@ -99,38 +86,28 @@ const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
   .prose :global(ul), .prose :global(ol) {
     margin-bottom: 1.25rem;
     padding-left: 1.5rem;
+    list-style-type: square;
   }
 
   .prose :global(li) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .prose :global(blockquote) {
-    border-left: 3px solid var(--color-teal);
-    padding-left: 1rem;
+    border-left: 3px solid var(--color-ember);
+    padding-left: 1.25rem;
     margin: 1.5rem 0;
     font-style: italic;
-    color: var(--color-sage);
-  }
-
-  .prose :global(img) {
-    border-radius: 0.5rem;
-    margin: 1.5rem 0;
-  }
-
-  .prose :global(a) {
-    color: var(--color-teal);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .prose :global(a:hover) {
-    color: var(--color-teal-light);
   }
 
   .prose :global(hr) {
     border: none;
-    border-top: 1px solid color-mix(in srgb, var(--color-sage) 25%, transparent);
+    border-top: 1px solid var(--color-border);
     margin: 2rem 0;
+  }
+
+  .prose :global(strong) {
+    color: var(--color-text);
+    font-weight: 600;
   }
 </style>

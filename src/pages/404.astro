@@ -3,20 +3,15 @@ import PageLayout from '../layouts/PageLayout.astro';
 ---
 
 <PageLayout title="404 — kafkade" description="Page not found.">
-  <div class="text-center py-24">
-    <h1 class="font-display text-6xl font-semibold text-[--color-teal] mb-4 tracking-tight">404</h1>
-    <p class="text-[--color-sage] mb-8">
+  <section class="py-16">
+    <h1 class="text-[2.5rem] font-bold mb-4">404</h1>
+    <p class="text-[0.9rem] text-[--color-text-muted] mb-6">
       This page doesn't exist. Perhaps it never did.
     </p>
-    <blockquote class="text-sm italic text-[--color-sage]/60 max-w-md mx-auto mb-8">
-      "Paths are made by walking."
-      <footer class="mt-2 text-xs not-italic font-display">— Franz Kafka</footer>
+    <blockquote class="border-l-[3px] border-[--color-ember] pl-5 mb-8">
+      <p class="text-[0.85rem] text-[--color-text-muted] italic">"Paths are made by walking."</p>
+      <cite class="block text-[0.8rem] text-[--color-sage] not-italic mt-1">— Franz Kafka</cite>
     </blockquote>
-    <a
-      href="/"
-      class="inline-block text-sm px-6 py-2.5 rounded-lg bg-[--color-teal] text-white hover:bg-[--color-teal-light] transition-colors font-medium"
-    >
-      Go home
-    </a>
-  </div>
+    <a href="/" class="accent text-[0.85rem]">← Go home</a>
+  </section>
 </PageLayout>

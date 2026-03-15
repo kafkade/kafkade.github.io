@@ -1,47 +1,41 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import SocialLinks from '../components/SocialLinks.astro';
 ---
 
 <PageLayout title="About — kafkade" description="About kafkade — software creator, reader, builder.">
-  <h1 class="font-display text-3xl sm:text-4xl font-semibold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] mb-8 tracking-tight">
-    About
-  </h1>
+  <section class="py-8">
+    <h1 class="text-[1.4rem] font-bold mb-6">About</h1>
 
-  <div class="space-y-6 text-[--color-text-dark]/90 [html[data-theme=light]_&]:text-[--color-text-light]/90 leading-relaxed">
-    <p>
-      I'm <strong class="text-[--color-teal] font-semibold">kafkade</strong> — a software creator based near the
-      Cascade mountains. I build tools, explore systems, and write about what I learn along the way.
-    </p>
+    <div class="space-y-4 text-[0.9rem] text-[--color-text-muted] leading-relaxed">
+      <p>
+        I'm <strong class="text-[--color-text] font-semibold">kafkade</strong> — a software creator based near the
+        Cascade mountains. I build tools, explore systems, and write about what I learn along the way.
+      </p>
 
-    <h2 class="font-display text-xl font-semibold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] pt-4 tracking-tight">
-      The Name
-    </h2>
-    <p>
-      <em>kafkade</em> is a portmanteau of <strong>Kafka</strong> — as in Franz Kafka, whose writing
-      explores the absurd, the bureaucratic, and the deeply human — and <strong>Cascade</strong>,
-      the mountain range that defines the Pacific Northwest landscape where I live and work.
-    </p>
-    <p>
-      It's a name that sits between literature and terrain, between thinking and building.
-    </p>
+      <h2 class="text-[1.1rem] font-bold text-[--color-text] pt-4">The Name</h2>
+      <p>
+        <em>kafkade</em> is a portmanteau of <strong class="text-[--color-text]">Kafka</strong> — as in Franz Kafka, whose writing
+        explores the absurd, the bureaucratic, and the deeply human — and <strong class="text-[--color-text]">Cascade</strong>,
+        the mountain range that defines the Pacific Northwest landscape where I live and work.
+      </p>
+      <p>
+        It's a name that sits between literature and terrain, between thinking and building.
+      </p>
 
-    <h2 class="font-display text-xl font-semibold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] pt-4 tracking-tight">
-      What I Do
-    </h2>
-    <p>
-      I build software. I care about clean code, thoughtful architecture, and tools that
-      respect their users. Most of my work is open source and lives on GitHub.
-    </p>
+      <h2 class="text-[1.1rem] font-bold text-[--color-text] pt-4">What I Do</h2>
+      <p>
+        I build software. I care about clean code, thoughtful architecture, and tools that
+        respect their users. Most of my work is open source and lives on GitHub.
+      </p>
 
-    <h2 class="font-display text-xl font-semibold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] pt-4 tracking-tight">
-      Connect
-    </h2>
-    <p>
-      You can find me on these platforms:
-    </p>
-    <div class="pt-2">
-      <SocialLinks />
+      <h2 class="text-[1.1rem] font-bold text-[--color-text] pt-4">Connect</h2>
+      <p>
+        <a href="https://github.com/kafkade" class="accent">GitHub</a><span class="text-[--color-sage] mx-1">·</span>
+        <a href="https://x.com/kafkade33926" class="accent">Twitter</a><span class="text-[--color-sage] mx-1">·</span>
+        <a href="https://bsky.app/profile/kafkadev.bsky.social" class="accent">Bluesky</a><span class="text-[--color-sage] mx-1">·</span>
+        <a href="https://patreon.com/c/kafkade" class="accent">Patreon</a><span class="text-[--color-sage] mx-1">·</span>
+        <a href="https://buymeacoffee.com/kafkade" class="accent">Buy Me a Coffee</a>
+      </p>
     </div>
-  </div>
+  </section>
 </PageLayout>

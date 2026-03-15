@@ -1,36 +1,16 @@
 ---
-import SocialLinks from './SocialLinks.astro';
-
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t border-[--color-sage]/10 mt-auto">
-  <div class="max-w-5xl mx-auto px-6 py-12">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
-      <!-- Brand -->
-      <div class="flex flex-col gap-3">
-        <div class="flex items-center gap-2">
-          <svg viewBox="0 0 32 32" fill="none" class="w-5 h-5" aria-hidden="true">
-            <path d="M 8,20 L 16,10 L 24,20" stroke="#0A7373" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
-            <path d="M 10,16 L 16,6 L 22,16" stroke="#0A7373" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="16" cy="5" r="1.2" fill="#EDAA25"/>
-          </svg>
-          <span class="font-display text-sm font-semibold text-[--color-sage]">kafkade</span>
-        </div>
-        <p class="text-xs text-[--color-sage]/60 leading-relaxed">
-          Code · Craft · Cascade
-        </p>
-      </div>
-
-      <!-- Social -->
-      <div class="flex sm:justify-center">
-        <SocialLinks />
-      </div>
-
-      <!-- Copyright -->
-      <p class="text-xs text-[--color-sage]/50 sm:text-right">
-        &copy; {currentYear} kafkade
-      </p>
+<footer class="border-t border-[--color-border] mt-12">
+  <div class="max-w-[720px] mx-auto px-6 py-8">
+    <div class="flex justify-between items-baseline flex-wrap gap-4 text-[0.8rem] text-[--color-sage]">
+      <span>&copy; {currentYear} kafkade</span>
+      <span>
+        <a href="https://github.com/kafkade" class="text-[--color-sage]">GitHub</a>
+        {' · '}
+        <a href="/rss.xml" class="text-[--color-sage]">RSS</a>
+      </span>
     </div>
   </div>
 </footer>
