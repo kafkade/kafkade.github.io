@@ -1,17 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
   <defs>
-    <linearGradient id="mono-gradient" x1="30" y1="26" x2="90" y2="88" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0D9E9E"/>
-      <stop offset="100%" stop-color="#0A7373"/>
+    <linearGradient id="mono-gradient" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A7373"/>
+      <stop offset="100%" stop-color="#0D9E9E"/>
     </linearGradient>
   </defs>
-  <!-- Circle frame -->
-  <circle cx="60" cy="60" r="56" stroke="#0A7373" stroke-width="2" fill="none" opacity="0.3"/>
-  <!-- Back peaks (receding ridges) -->
-  <path d="M 14,88 L 36,50 L 50,66 L 60,88" fill="#0A7373" opacity="0.25"/>
-  <path d="M 60,88 L 70,66 L 84,50 L 106,88" fill="#0A7373" opacity="0.25"/>
-  <!-- Front center peak (tallest) -->
-  <path d="M 26,88 L 60,26 L 94,88 Z" fill="url(#mono-gradient)"/>
-  <!-- Amber summit accent -->
-  <path d="M 52,38 L 60,26 L 68,38" stroke="#EDAA25" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Circle -->
+  <circle cx="60" cy="60" r="56" stroke="url(#mono-gradient)" stroke-width="3" fill="none"/>
+  <!-- K letterform -->
+  <text
+    x="60" y="78"
+    font-family="'Playfair Display', Georgia, serif"
+    font-weight="900"
+    font-size="64"
+    fill="url(#mono-gradient)"
+    text-anchor="middle"
+  >K</text>
+  <!-- Mountain peak accent -->
+  <path d="M 52 22 L 60 10 L 68 22" stroke="#EDAA25" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
