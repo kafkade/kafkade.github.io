@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/900.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource-variable/jetbrains-mono";
+
+@theme {
+  --color-midnight: #010221;
+  --color-teal: #0A7373;
+  --color-teal-light: #0D9E9E;
+  --color-sage: #B7BF99;
+  --color-amber: #EDAA25;
+  --color-amber-light: #F5C04A;
+  --color-ember: #C43302;
+  --color-surface-light: #F5F5F0;
+  --color-surface-dark: #020318;
+  --color-text-light: #1A1A2E;
+  --color-text-dark: #E8E8E0;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-midnight);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="light"] body {
+  background-color: var(--color-surface-light);
+  color: var(--color-text-light);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-teal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-teal-light);
+}
+
+/* Code blocks */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+pre {
+  font-family: var(--font-mono);
+  background-color: var(--color-surface-dark);
+  border: 1px solid color-mix(in srgb, var(--color-sage) 20%, transparent);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+[data-theme="light"] pre {
+  background-color: #F0F0EB;
+  border-color: color-mix(in srgb, var(--color-sage) 40%, transparent);
+}
+
+/* Selection */
+::selection {
+  background-color: color-mix(in srgb, var(--color-teal) 40%, transparent);
+  color: var(--color-text-dark);
+}

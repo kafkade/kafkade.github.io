@@ -1,0 +1,47 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+---
+
+<PageLayout title="About — kafkade" description="About kafkade — software creator, reader, builder.">
+  <h1 class="font-display text-4xl font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] mb-8">
+    About
+  </h1>
+
+  <div class="space-y-6 text-[--color-text-dark]/90 [html[data-theme=light]_&]:text-[--color-text-light]/90 leading-relaxed">
+    <p>
+      I'm <strong class="text-[--color-teal]">kafkade</strong> — a software creator based near the
+      Cascade mountains. I build tools, explore systems, and write about what I learn along the way.
+    </p>
+
+    <h2 class="font-display text-2xl font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] pt-4">
+      The Name
+    </h2>
+    <p>
+      <em>kafkade</em> is a portmanteau of <strong>Kafka</strong> — as in Franz Kafka, whose writing
+      explores the absurd, the bureaucratic, and the deeply human — and <strong>Cascade</strong>,
+      the mountain range that defines the Pacific Northwest landscape where I live and work.
+    </p>
+    <p>
+      It's a name that sits between literature and terrain, between thinking and building.
+    </p>
+
+    <h2 class="font-display text-2xl font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] pt-4">
+      What I Do
+    </h2>
+    <p>
+      I build software. I care about clean code, thoughtful architecture, and tools that
+      respect their users. Most of my work is open source and lives on GitHub.
+    </p>
+
+    <h2 class="font-display text-2xl font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] pt-4">
+      Connect
+    </h2>
+    <p>
+      You can find me on these platforms:
+    </p>
+    <div class="pt-2">
+      <SocialLinks />
+    </div>
+  </div>
+</PageLayout>
