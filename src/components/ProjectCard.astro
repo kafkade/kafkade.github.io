@@ -10,9 +10,9 @@ interface Props {
 const { name, description, url, repo, tags = [] } = Astro.props;
 ---
 
-<div class="group rounded-lg border border-[--color-sage]/15 bg-[--color-surface-dark] [html[data-theme=light]_&]:bg-white p-6 transition-all hover:border-[--color-teal]/40 hover:shadow-lg hover:shadow-[--color-teal]/5">
+<div class="group relative rounded-xl border border-[--color-sage]/10 bg-[--color-surface-dark]/50 [html[data-theme=light]_&]:bg-white/80 p-6 transition-all duration-300 hover:border-[--color-teal]/30 hover:bg-[--color-surface-dark] [html[data-theme=light]_&]:hover:bg-white hover:shadow-xl hover:shadow-[--color-teal]/5 hover:-translate-y-0.5">
   <div class="flex items-start justify-between mb-3">
-    <h3 class="font-display text-lg font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] group-hover:text-[--color-teal] transition-colors">
+    <h3 class="font-display text-base font-semibold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] group-hover:text-[--color-teal] transition-colors tracking-tight">
       {name}
     </h3>
     <div class="flex items-center gap-2 shrink-0 ml-4">

@@ -17,7 +17,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 ---
 
 <a href={`/blog/${slug}`} class="group block no-underline">
-  <article class="rounded-lg border border-[--color-sage]/15 bg-[--color-surface-dark] [html[data-theme=light]_&]:bg-white p-6 transition-all hover:border-[--color-teal]/40 hover:shadow-lg hover:shadow-[--color-teal]/5">
+  <article class="rounded-xl border border-[--color-sage]/10 bg-[--color-surface-dark]/50 [html[data-theme=light]_&]:bg-white/80 p-6 transition-all duration-300 hover:border-[--color-teal]/30 hover:bg-[--color-surface-dark] [html[data-theme=light]_&]:hover:bg-white hover:shadow-xl hover:shadow-[--color-teal]/5 hover:-translate-y-0.5">
     <div class="flex items-center gap-3 mb-3">
       <time datetime={pubDate.toISOString()} class="text-xs text-[--color-sage]/80">
         {formattedDate}
@@ -32,7 +32,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
         </div>
       )}
     </div>
-    <h3 class="font-display text-lg font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] group-hover:text-[--color-teal] transition-colors mb-2">
+    <h3 class="font-display text-base font-semibold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] group-hover:text-[--color-teal] transition-colors tracking-tight mb-2">
       {title}
     </h3>
     <p class="text-sm text-[--color-sage] leading-relaxed">

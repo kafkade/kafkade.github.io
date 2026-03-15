@@ -1,8 +1,6 @@
 @import "tailwindcss";
-@import "@fontsource/playfair-display/700.css";
-@import "@fontsource/playfair-display/900.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
+@import "@fontsource-variable/lexend";
+@import "@fontsource-variable/manrope";
 @import "@fontsource-variable/jetbrains-mono";
 
 @theme {
@@ -18,33 +16,35 @@
   --color-text-light: #1A1A2E;
   --color-text-dark: #E8E8E0;
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Lexend Variable", system-ui, sans-serif;
+  --font-body: "Manrope Variable", system-ui, sans-serif;
   --font-mono: "JetBrains Mono Variable", monospace;
 }
 
-/* Base styles */
+/* Base */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-midnight);
+  background: radial-gradient(ellipse at top center, #020425 0%, var(--color-midnight) 60%, #000118 100%);
+  background-attachment: fixed;
   color: var(--color-text-dark);
-  line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.65;
 }
 
 [data-theme="light"] body {
-  background-color: var(--color-surface-light);
+  background: var(--color-surface-light);
   color: var(--color-text-light);
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 a {
@@ -57,38 +57,67 @@ a:hover {
   color: var(--color-teal-light);
 }
 
-/* Prevent global link styles from affecting the logo SVG */
-.logo-link {
-  color: inherit;
-}
+.logo-link,
 .logo-link:hover {
   color: inherit;
 }
 
-/* Code blocks */
+/* Code */
 code {
   font-family: var(--font-mono);
-  font-size: 0.9em;
+  font-size: 0.875em;
+  background: var(--color-surface-dark);
+  color: var(--color-text-dark);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+}
+
+[data-theme="light"] code {
+  background: #E8E8E2;
+  color: var(--color-text-light);
 }
 
 pre {
   font-family: var(--font-mono);
   background-color: var(--color-surface-dark);
-  border: 1px solid color-mix(in srgb, var(--color-sage) 20%, transparent);
-  border-radius: 0.5rem;
-  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--color-sage) 12%, transparent);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
   overflow-x: auto;
-  font-size: 0.875rem;
-  line-height: 1.7;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+}
+
+pre code {
+  background: none;
+  padding: 0;
 }
 
 [data-theme="light"] pre {
-  background-color: #F0F0EB;
-  border-color: color-mix(in srgb, var(--color-sage) 40%, transparent);
+  background-color: #EDEDEA;
+  border-color: color-mix(in srgb, var(--color-sage) 30%, transparent);
 }
 
 /* Selection */
 ::selection {
-  background-color: color-mix(in srgb, var(--color-teal) 40%, transparent);
-  color: var(--color-text-dark);
+  background-color: color-mix(in srgb, var(--color-teal) 35%, transparent);
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-teal) 30%, transparent);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-teal);
 }

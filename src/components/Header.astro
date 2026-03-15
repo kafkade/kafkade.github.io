@@ -11,32 +11,33 @@ const navLinks = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="w-full border-b border-[--color-sage]/15">
-  <nav class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+<header class="w-full backdrop-blur-sm bg-[--color-midnight]/70 [html[data-theme=light]_&]:bg-[--color-surface-light]/70 sticky top-0 z-50 border-b border-[--color-sage]/10">
+  <nav class="max-w-5xl mx-auto px-6 py-3.5 flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="group flex items-center gap-2 no-underline logo-link">
-      <svg viewBox="0 0 32 32" fill="none" class="w-8 h-8 shrink-0" aria-hidden="true">
-        <path d="M 6,26 L 16,6 L 26,26" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M 12,16 L 16,26 L 20,16" stroke="#0A7373" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-        <circle cx="16" cy="5" r="2" fill="#EDAA25"/>
+    <a href="/" class="group flex items-center gap-2.5 no-underline logo-link">
+      <svg viewBox="0 0 32 32" fill="none" class="w-7 h-7 shrink-0" aria-hidden="true">
+        <path d="M 6,24 L 16,14 L 26,24" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+        <path d="M 8,20 L 16,10 L 24,20" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+        <path d="M 10,16 L 16,6 L 22,16" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="16" cy="5" r="1.5" fill="#EDAA25"/>
       </svg>
-      <span class="font-display text-lg font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] group-hover:text-[--color-teal] transition-colors">
+      <span class="font-display text-base font-semibold tracking-tight text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] group-hover:text-[--color-teal] transition-colors">
         kafkade
       </span>
     </a>
 
     <!-- Navigation -->
-    <div class="flex items-center gap-6">
-      <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0">
+    <div class="flex items-center gap-1">
+      <ul class="hidden sm:flex items-center gap-1 list-none m-0 p-0">
         {navLinks.map(({ href, label }) => (
           <li>
             <a
               href={href}
               class:list={[
-                'text-sm transition-colors no-underline',
+                'text-sm px-3 py-1.5 rounded-md transition-colors no-underline',
                 currentPath === href || (href !== '/' && currentPath.startsWith(href))
-                  ? 'text-[--color-teal] font-medium'
-                  : 'text-[--color-sage] hover:text-[--color-teal-light]',
+                  ? 'text-[--color-teal] bg-[--color-teal]/8 font-medium'
+                  : 'text-[--color-sage] hover:text-[--color-text-dark] [html[data-theme=light]_&]:hover:text-[--color-text-light] hover:bg-[--color-sage]/8',
               ]}
             >
               {label}
@@ -44,12 +45,13 @@ const currentPath = Astro.url.pathname;
           </li>
         ))}
       </ul>
+      <div class="w-px h-4 bg-[--color-sage]/15 mx-2 hidden sm:block"></div>
       <ThemeToggle />
 
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-btn"
-        class="sm:hidden text-[--color-sage] hover:text-[--color-teal] transition-colors"
+        class="sm:hidden text-[--color-sage] hover:text-[--color-teal] transition-colors ml-2 p-1"
         aria-label="Toggle menu"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -60,17 +62,17 @@ const currentPath = Astro.url.pathname;
   </nav>
 
   <!-- Mobile navigation -->
-  <div id="mobile-menu" class="hidden sm:hidden border-t border-[--color-sage]/15">
-    <ul class="flex flex-col px-6 py-4 gap-3 list-none m-0 p-0">
+  <div id="mobile-menu" class="hidden sm:hidden border-t border-[--color-sage]/10 bg-[--color-midnight]/95 [html[data-theme=light]_&]:bg-[--color-surface-light]/95 backdrop-blur-sm">
+    <ul class="flex flex-col px-6 py-3 gap-1 list-none m-0 p-0">
       {navLinks.map(({ href, label }) => (
         <li>
           <a
             href={href}
             class:list={[
-              'text-sm block py-1 no-underline',
+              'text-sm block py-2 px-3 rounded-md no-underline transition-colors',
               currentPath === href || (href !== '/' && currentPath.startsWith(href))
-                ? 'text-[--color-teal] font-medium'
-                : 'text-[--color-sage] hover:text-[--color-teal-light]',
+                ? 'text-[--color-teal] bg-[--color-teal]/8 font-medium'
+                : 'text-[--color-sage] hover:text-[--color-text-dark] [html[data-theme=light]_&]:hover:text-[--color-text-light] hover:bg-[--color-sage]/8',
             ]}
           >
             {label}
