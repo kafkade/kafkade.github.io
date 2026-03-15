@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+  <!-- Banner for X (Twitter) and Bluesky — 1500x500 -->
+  <rect width="1500" height="500" fill="#010221"/>
+
+  <!-- Subtle mountain range background -->
+  <path d="M 0,500 L 200,320 L 350,400 L 550,280 L 700,360 L 900,250 L 1050,340 L 1200,270 L 1350,350 L 1500,300 L 1500,500 Z" fill="#0A7373" opacity="0.06"/>
+
+  <!-- Terminal window (left side) -->
+  <rect x="80" y="100" width="440" height="300" rx="16" fill="#0A7373" opacity="0.12"/>
+  <rect x="80" y="100" width="440" height="36" rx="16" fill="#0A7373" opacity="0.2"/>
+  <rect x="80" y="124" width="440" height="276" fill="#0A7373" opacity="0.12"/>
+  <circle cx="106" cy="118" r="6" fill="#C43302" opacity="0.8"/>
+  <circle cx="126" cy="118" r="6" fill="#EDAA25" opacity="0.8"/>
+  <circle cx="146" cy="118" r="6" fill="#0A7373" opacity="0.8"/>
+
+  <!-- Terminal code lines -->
+  <rect x="108" y="152" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="132" y="152" width="100" height="6" rx="1" fill="#E8E8E0" opacity="0.4"/>
+  <rect x="108" y="172" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="132" y="172" width="70" height="6" rx="1" fill="#EDAA25" opacity="0.5"/>
+  <rect x="108" y="192" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="132" y="192" width="130" height="6" rx="1" fill="#C43302" opacity="0.4"/>
+  <rect x="108" y="212" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="132" y="212" width="45" height="6" rx="1" fill="#0A7373" opacity="0.6"/>
+  <rect x="108" y="232" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="132" y="232" width="90" height="6" rx="1" fill="#E8E8E0" opacity="0.35"/>
+  <rect x="108" y="252" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
+  <rect x="132" y="252" width="6" height="6" rx="1" fill="#EDAA25"/>
+
+  <!-- Name and tagline (right side) -->
+  <text x="650" y="230" font-family="monospace" font-size="64" font-weight="700" fill="#E8E8E0">kafkade</text>
+  <text x="650" y="280" font-family="monospace" font-size="22" fill="#C43302">software, systems, and other things</text>
+
+  <!-- Stacked chevrons (far right) -->
+  <path d="M 1280,300 L 1340,260 L 1400,300" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.15"/>
+  <path d="M 1290,280 L 1340,248 L 1390,280" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M 1300,260 L 1340,236 L 1380,260" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 1310,240 L 1340,222 L 1370,240" stroke="#0A7373" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="1340" cy="218" r="4" fill="#EDAA25"/>
+</svg>
