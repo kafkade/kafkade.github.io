@@ -1,0 +1,76 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+---
+
+<PageLayout title="kafkade — Code. Craft. Cascade." description="Software creator building at the intersection of code and craft.">
+  <!-- Hero -->
+  <section class="py-16 sm:py-24 text-center">
+    <!-- ASCII-style brand mark -->
+    <div class="mb-8 text-[--color-teal] font-mono text-xs sm:text-sm leading-tight select-none" aria-hidden="true">
+      <pre class="inline-block text-left">{`
+  ╻ ╻   ╻ ╻         ╻
+  ┣━┻┓  ┣━┫  ╺┳╸  ┏━┛  ┏━╸
+  ┛  ┛  ╹ ╹   ╹   ┗━╸  ┗━╸
+      `}</pre>
+    </div>
+
+    <h1 class="font-display text-5xl sm:text-6xl font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] mb-4 tracking-tight">
+      kafkade
+    </h1>
+    <p class="text-lg text-[--color-amber] font-display italic mb-6">
+      Code. Craft. Cascade.
+    </p>
+    <p class="text-[--color-sage] max-w-lg mx-auto leading-relaxed">
+      Software creator. Building tools and exploring ideas at the intersection
+      of thoughtful engineering and the Pacific Northwest.
+    </p>
+
+    <div class="mt-8 flex justify-center">
+      <SocialLinks />
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <hr class="border-[--color-sage]/15 my-4" />
+
+  <!-- Featured Projects -->
+  <section class="py-12">
+    <h2 class="font-display text-2xl font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] mb-8">
+      Projects
+    </h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <ProjectCard
+        name="kafkade.com"
+        description="This very website — a minimal, dark-themed portfolio and blog built with Astro, Tailwind CSS, and deployed on Cloudflare Pages."
+        repo="https://github.com/kafkade/kafkade"
+        url="https://kafkade.com"
+        tags={['Astro', 'Tailwind CSS', 'Cloudflare']}
+      />
+      <ProjectCard
+        name="Coming Soon"
+        description="More projects on the way. Check back later or follow along on GitHub."
+        repo="https://github.com/kafkade"
+        tags={['Stay Tuned']}
+      />
+    </div>
+    <div class="mt-6 text-center">
+      <a href="/projects" class="text-sm text-[--color-teal] hover:text-[--color-teal-light] transition-colors">
+        View all projects →
+      </a>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="py-12 border-t border-[--color-sage]/15">
+    <blockquote class="border-l-2 border-[--color-teal]/40 pl-6 italic text-[--color-sage]/80 text-sm leading-relaxed">
+      <p>
+        "A book must be the axe for the frozen sea within us."
+      </p>
+      <footer class="mt-3 text-xs text-[--color-sage]/50 not-italic">
+        — Franz Kafka
+      </footer>
+    </blockquote>
+  </section>
+</PageLayout>

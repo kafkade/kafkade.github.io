@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
+  <defs>
+    <linearGradient id="brand-gradient" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A7373"/>
+      <stop offset="100%" stop-color="#0D9E9E"/>
+    </linearGradient>
+  </defs>
+  <!-- kafkade wordmark -->
+  <text
+    x="200" y="56"
+    font-family="'Playfair Display', Georgia, serif"
+    font-weight="700"
+    font-size="52"
+    fill="url(#brand-gradient)"
+    text-anchor="middle"
+    letter-spacing="4"
+  >kafkade</text>
+  <!-- Subtle mountain peak accent on the first 'k' -->
+  <path d="M 56 18 L 62 8 L 68 18" stroke="#EDAA25" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

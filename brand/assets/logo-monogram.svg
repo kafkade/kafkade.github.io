@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="mono-gradient" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A7373"/>
+      <stop offset="100%" stop-color="#0D9E9E"/>
+    </linearGradient>
+  </defs>
+  <!-- Circle -->
+  <circle cx="60" cy="60" r="56" stroke="url(#mono-gradient)" stroke-width="3" fill="none"/>
+  <!-- K letterform -->
+  <text
+    x="60" y="78"
+    font-family="'Playfair Display', Georgia, serif"
+    font-weight="900"
+    font-size="64"
+    fill="url(#mono-gradient)"
+    text-anchor="middle"
+  >K</text>
+  <!-- Mountain peak accent -->
+  <path d="M 52 22 L 60 10 L 68 22" stroke="#EDAA25" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
