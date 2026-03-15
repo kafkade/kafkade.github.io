@@ -1,0 +1,22 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="404 — kafkade" description="Page not found.">
+  <div class="text-center py-24">
+    <h1 class="font-display text-6xl font-bold text-[--color-teal] mb-4">404</h1>
+    <p class="text-[--color-sage] mb-8">
+      This page doesn't exist. Perhaps it never did.
+    </p>
+    <blockquote class="text-sm italic text-[--color-sage]/60 max-w-md mx-auto mb-8">
+      "Paths are made by walking."
+      <footer class="mt-2 text-xs not-italic">— Franz Kafka</footer>
+    </blockquote>
+    <a
+      href="/"
+      class="inline-block text-sm px-6 py-2.5 rounded-lg bg-[--color-teal] text-white hover:bg-[--color-teal-light] transition-colors"
+    >
+      Go home
+    </a>
+  </div>
+</PageLayout>
