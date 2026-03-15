@@ -29,7 +29,7 @@
 
   <!-- Name and tagline (right side) -->
   <text x="650" y="230" font-family="monospace" font-size="64" font-weight="700" fill="#E8E8E0">kafkade</text>
-  <text x="650" y="280" font-family="monospace" font-size="22" fill="#C43302">Code. Craft. Cascade.</text>
+  <text x="650" y="280" font-family="monospace" font-size="22" fill="#C43302">software, systems, and other things</text>
 
   <!-- Stacked chevrons (far right) -->
   <path d="M 1280,300 L 1340,260 L 1400,300" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.15"/>

@@ -34,7 +34,7 @@
 
   <!-- Name + tagline (right side) -->
   <text x="740" y="280" font-family="monospace" font-size="72" font-weight="700" fill="#E8E8E0">kafkade</text>
-  <text x="740" y="340" font-family="monospace" font-size="24" fill="#C43302">Code. Craft. Cascade.</text>
+  <text x="740" y="340" font-family="monospace" font-size="24" fill="#C43302">software, systems, and other things</text>
   <text x="740" y="390" font-family="monospace" font-size="16" fill="#B7BF99" opacity="0.6">Software creator · Pacific Northwest</text>
 
   <!-- Stacked chevrons (bottom right) -->
