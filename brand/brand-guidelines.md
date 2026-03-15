@@ -73,16 +73,16 @@ Caption:    0.75rem / 12px
 ## Logo
 
 ### Wordmark (`logo-full.svg`)
-The primary logo. The abstract mountain mark alongside "kafkade" rendered as a clean SVG wordmark.
+The primary logo. "kafkade" rendered as a clean SVG wordmark. The stylized letterforms use Midnight and Teal.
 
-### Mark (`logo-monogram.svg`)
-Three cascading mountain peaks inside a circle — the tallest center peak with an amber summit accent, flanked by lighter ridgeline silhouettes. Used where space is limited or without the wordmark.
+### Monogram (`logo-monogram.svg`)
+A "K" letterform inside a circle. Used where space is limited.
 
 ### Favicon (`favicon.svg`)
-The mountain mark adapted for 16×16 and 32×32 display. Simplified peaks on a Midnight background circle.
+The monogram adapted for 16×16 and 32×32 display.
 
 ### Avatar (`avatar.png`)
-512×512 version of the mountain mark for social profiles.
+512×512 version of the monogram for social profiles.
 
 ### Usage Rules
 
