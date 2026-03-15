@@ -14,6 +14,13 @@ No test suite or linter configured. Use `--no-gpg-sign` on commits if GPG times 
 
 **Astro 5 static site** with Tailwind CSS v4, deployed to Cloudflare Pages.
 
+## Git Policy
+
+- **Never commit automatically.** Do not run `git commit`, `git push`, or any
+  other command that creates or modifies commits without explicit user approval.
+- Always present proposed changes and let the user decide when to commit.
+- This applies to all agents, sub-agents, and automated workflows.
+
 ### Layout hierarchy
 
 ```
