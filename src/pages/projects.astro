@@ -1,0 +1,37 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    name: 'kafkade.com',
+    description: 'This very website — a minimal, dark-themed portfolio and blog built with Astro, Tailwind CSS, and deployed on Cloudflare Pages.',
+    repo: 'https://github.com/kafkade/kafkade',
+    url: 'https://kafkade.com',
+    tags: ['Astro', 'Tailwind CSS', 'Cloudflare Pages'],
+  },
+  // Add more projects here as you build them
+];
+---
+
+<PageLayout title="Projects — kafkade" description="Software projects and open source work by kafkade." wide>
+  <h1 class="font-display text-4xl font-bold text-[--color-text-dark] [html[data-theme=light]_&]:text-[--color-text-light] mb-4">
+    Projects
+  </h1>
+  <p class="text-[--color-sage] mb-10 max-w-xl">
+    Things I've built, am building, or plan to build. Most are open source.
+  </p>
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    {projects.map((project) => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+
+  {projects.length === 0 && (
+    <p class="text-[--color-sage]/60 text-center py-16">
+      Projects coming soon. Follow along on{' '}
+      <a href="https://github.com/kafkade" class="text-[--color-teal]">GitHub</a>.
+    </p>
+  )}
+</PageLayout>
