@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Profile avatar — Terminal design. Use for all platforms. -->
+  <rect width="512" height="512" rx="64" fill="#010221"/>
+
+  <!-- Terminal window -->
+  <rect x="76" y="100" width="360" height="312" rx="20" fill="#0A7373" opacity="0.15"/>
+  <rect x="76" y="100" width="360" height="48" rx="20" fill="#0A7373" opacity="0.25"/>
+  <rect x="76" y="130" width="360" height="282" rx="0" fill="#0A7373" opacity="0.15"/>
+  <rect x="76" y="392" width="360" height="20" rx="0 0 20 20" fill="#0A7373" opacity="0.15"/>
+
+  <!-- Window control dots -->
+  <circle cx="112" cy="124" r="8" fill="#C43302" opacity="0.85"/>
+  <circle cx="138" cy="124" r="8" fill="#EDAA25" opacity="0.85"/>
+  <circle cx="164" cy="124" r="8" fill="#0A7373" opacity="0.85"/>
+
+  <!-- Terminal text lines -->
+  <rect x="108" y="170" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="170" width="130" height="8" rx="2" fill="#E8E8E0" opacity="0.5"/>
+
+  <rect x="108" y="196" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="196" width="90" height="8" rx="2" fill="#EDAA25" opacity="0.65"/>
+
+  <rect x="108" y="222" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="222" width="160" height="8" rx="2" fill="#C43302" opacity="0.55"/>
+
+  <rect x="108" y="248" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="248" width="55" height="8" rx="2" fill="#0A7373" opacity="0.7"/>
+
+  <rect x="108" y="274" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="274" width="120" height="8" rx="2" fill="#E8E8E0" opacity="0.4"/>
+
+  <rect x="108" y="300" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="300" width="75" height="8" rx="2" fill="#EDAA25" opacity="0.5"/>
+
+  <rect x="108" y="326" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="326" width="180" height="8" rx="2" fill="#0A7373" opacity="0.5"/>
+
+  <!-- Cursor line -->
+  <rect x="108" y="358" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
+  <rect x="140" y="358" width="8" height="8" rx="1" fill="#EDAA25"/>
+
+  <!-- Stacked chevrons watermark bottom -->
+  <path d="M 206,440 L 256,418 L 306,440" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/>
+  <path d="M 216,448 L 256,430 L 296,448" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+</svg>

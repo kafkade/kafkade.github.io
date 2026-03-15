@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>kafkade — Social Media Kit</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "JetBrains Mono", monospace; background: #F8F7F4; color: #1A1A2E; padding: 2rem; line-height: 1.6; }
+    h1 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+    p.sub { color: #6B6B7B; font-size: 0.75rem; margin-bottom: 2.5rem; }
+    .section { margin-bottom: 3rem; }
+    .section h2 { font-size: 0.9rem; font-weight: 700; color: #C43302; margin-bottom: 0.3rem; }
+    .section .dims { font-size: 0.7rem; color: #B7BF99; margin-bottom: 1rem; }
+    .section img, .section svg { max-width: 100%; height: auto; border: 1px solid #E0DED8; }
+    .avatar-row { display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start; }
+    .avatar-row .item { text-align: center; }
+    .avatar-row .item p { font-size: 0.7rem; color: #6B6B7B; margin-top: 0.5rem; }
+    .circle-crop { border-radius: 50%; overflow: hidden; display: inline-block; }
+    table { font-size: 0.75rem; border-collapse: collapse; margin-top: 1.5rem; }
+    th, td { text-align: left; padding: 0.3rem 1rem; border-bottom: 1px solid #E0DED8; }
+    th { color: #6B6B7B; }
+  </style>
+</head>
+<body>
+  <h1>kafkade — Social Media Kit</h1>
+  <p class="sub">All assets ready to export. Open each SVG in a browser and screenshot, or use Figma / Inkscape / svgtopng.com to convert.</p>
+
+  <!-- Avatar -->
+  <div class="section">
+    <h2>// Profile Picture (all platforms)</h2>
+    <div class="dims">512 × 512 — works for all platforms (they downscale as needed)</div>
+    <div class="avatar-row">
+      <div class="item">
+        <img src="avatar-512.svg" width="200" height="200">
+        <p>Square (full)</p>
+      </div>
+      <div class="item">
+        <div class="circle-crop" style="width:200px;height:200px;">
+          <img src="avatar-512.svg" width="200" height="200">
+        </div>
+        <p>Circle crop preview<br>(X, GitHub, Patreon, BMC)</p>
+      </div>
+      <div class="item">
+        <div class="circle-crop" style="width:80px;height:80px;">
+          <img src="avatar-512.svg" width="80" height="80">
+        </div>
+        <p>80px (small avatar)</p>
+      </div>
+      <div class="item">
+        <div class="circle-crop" style="width:40px;height:40px;">
+          <img src="avatar-512.svg" width="40" height="40">
+        </div>
+        <p>40px (tiny)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- X / Bluesky Banner -->
+  <div class="section">
+    <h2>// X (Twitter) + Bluesky Banner</h2>
+    <div class="dims">1500 × 500</div>
+    <img src="banner-x-bluesky-1500x500.svg">
+  </div>
+
+  <!-- Patreon -->
+  <div class="section">
+    <h2>// Patreon Cover</h2>
+    <div class="dims">1600 × 400</div>
+    <img src="banner-patreon-1600x400.svg">
+  </div>
+
+  <!-- BMC -->
+  <div class="section">
+    <h2>// Buy Me a Coffee Cover</h2>
+    <div class="dims">1920 × 400</div>
+    <img src="banner-bmc-1920x400.svg">
+  </div>
+
+  <!-- GitHub -->
+  <div class="section">
+    <h2>// GitHub Profile README Header</h2>
+    <div class="dims">1280 × 640</div>
+    <img src="banner-github-1280x640.svg">
+  </div>
+
+  <!-- Specs table -->
+  <table>
+    <tr><th>Platform</th><th>Profile Pic</th><th>Banner</th><th>File</th></tr>
+    <tr><td>X (Twitter)</td><td>400×400 (circle)</td><td>1500×500</td><td>avatar-512.svg + banner-x-bluesky</td></tr>
+    <tr><td>Bluesky</td><td>400×400 (circle)</td><td>1500×500</td><td>avatar-512.svg + banner-x-bluesky</td></tr>
+    <tr><td>Instagram</td><td>320×320 (circle)</td><td>N/A</td><td>avatar-512.svg</td></tr>
+    <tr><td>GitHub</td><td>400×400 (circle)</td><td>1280×640</td><td>avatar-512.svg + banner-github</td></tr>
+    <tr><td>Patreon</td><td>512×512 (circle)</td><td>1600×400</td><td>avatar-512.svg + banner-patreon</td></tr>
+    <tr><td>Buy Me a Coffee</td><td>300×300 (circle)</td><td>1920×400</td><td>avatar-512.svg + banner-bmc</td></tr>
+  </table>
+</body>
+</html>
