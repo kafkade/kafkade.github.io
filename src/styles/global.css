@@ -57,6 +57,14 @@ a:hover {
   color: var(--color-teal-light);
 }
 
+/* Prevent global link styles from affecting the logo SVG */
+.logo-link {
+  color: inherit;
+}
+.logo-link:hover {
+  color: inherit;
+}
+
 /* Code blocks */
 code {
   font-family: var(--font-mono);

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- 4: Stacked Chevrons — Nesting V shapes suggesting mountain layers -->
+  <path d="M 6,24 L 16,14 L 26,24" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <path d="M 8,20 L 16,10 L 24,20" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <path d="M 10,16 L 16,6 L 22,16" stroke="#0A7373" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="5" r="1.5" fill="#EDAA25"/>
+</svg>

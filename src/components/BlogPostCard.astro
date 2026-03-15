@@ -19,7 +19,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 <a href={`/blog/${slug}`} class="group block no-underline">
   <article class="rounded-lg border border-[--color-sage]/15 bg-[--color-surface-dark] [html[data-theme=light]_&]:bg-white p-6 transition-all hover:border-[--color-teal]/40 hover:shadow-lg hover:shadow-[--color-teal]/5">
     <div class="flex items-center gap-3 mb-3">
-      <time datetime={pubDate.toISOString()} class="text-xs text-[--color-sage]/60">
+      <time datetime={pubDate.toISOString()} class="text-xs text-[--color-sage]/80">
         {formattedDate}
       </time>
       {tags.length > 0 && (
