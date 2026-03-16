@@ -12,6 +12,7 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const environment: string = __ENVIRONMENT__;
 ---
 
 <!doctype html>
@@ -48,6 +49,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    {/* Baked-in environment tag so devtools can identify production vs preview deploys.
+        Renders as <!-- Environment: production --> or <!-- Environment: beta --> etc.
+        Uses set:html because Astro does not interpolate expressions inside HTML comments. */}
+    <Fragment set:html={`<!-- Environment: ${environment} -->`} />
 
     <!-- Theme initialization — clear legacy dark preference, force light -->
     <script is:inline>

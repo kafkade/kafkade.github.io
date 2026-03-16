@@ -1,11 +1,22 @@
 ---
 const currentYear = new Date().getFullYear();
+// Shows an amber badge (e.g. "BETA") next to the copyright on non-production deploys.
+// Hidden on production. See astro.config.mjs for how __ENVIRONMENT__ is derived.
+const environment: string = __ENVIRONMENT__;
+const isProduction = environment === 'production';
 ---
 
 <footer class="border-t border-[--color-border] mt-12">
   <div class="max-w-[720px] mx-auto px-6 py-8">
     <div class="flex justify-between items-baseline flex-wrap gap-4 text-[0.8rem] text-[--color-sage]">
-      <span>&copy; {currentYear} kafkade</span>
+      <span>
+        &copy; {currentYear} kafkade
+        {!isProduction && (
+          <span class="ml-2 inline-block text-[0.65rem] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded border border-[--color-amber] text-[--color-amber] align-middle">
+            {environment}
+          </span>
+        )}
+      </span>
       <span>
         <a href="https://github.com/kafkade" class="text-[--color-sage]">GitHub</a>
         {' · '}
