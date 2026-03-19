@@ -26,9 +26,9 @@ A software creator building at the intersection of thoughtful engineering and th
 | Highlight | Amber     | `#EDAA25` | Special emphasis, logo accent dot         |
 
 ### Light Mode (default)
-- Background: `#F8F7F4` (warm paper white)
+- Background: `#E5DECB` (warm paper/parchment) + `paper-bg.png` texture tile
 - Text: `#1A1A2E`
-- Muted text: `#6B6B7B`
+- Muted text: `#5A5A6A` (WCAG AA 5.04:1 on paper bg)
 - Borders: `#E0DED8`
 
 ### Dark Mode
@@ -41,15 +41,18 @@ A software creator building at the intersection of thoughtful engineering and th
 
 ## Typography
 
-**Single font**: JetBrains Mono Variable — used for everything (headings, body, nav, code).
-Full monospace, hacker aesthetic.
+**Dual font system**:
+- **Body / Nav / Code**: IBM Plex Mono — a literary monospace with warmer character shapes than typical code fonts. Complements the Kafka literary reference.
+- **Headings**: Lora (Variable) — a warm, bookish serif that pairs with the papery background and reinforces the "programmer's journal" aesthetic.
+
+Full monospace body preserves the hacker aesthetic; serif headings add visual hierarchy and a literary touch.
 
 ---
 
 ## Design Philosophy — "Terminal Journal"
 
 Inspired by [マリウス (xn--gckvb8fzb.com)](https://xn--gckvb8fzb.com/):
-- Light theme default
+- Light theme default with paper texture background (from k4 illustration)
 - No cards, no gradients, no blur, no shadows
 - Content as plain text with good spacing
 - Underlined links with inverted hover (bg fills, colors swap)
@@ -61,15 +64,20 @@ Inspired by [マリウス (xn--gckvb8fzb.com)](https://xn--gckvb8fzb.com/):
 
 ## Avatar
 
-**Beetle circuit medallion** — a circular medallion on midnight background featuring a beetle (Kafka's *Metamorphosis*) with circuit-board trace patterns on its wings. The scene includes PNW mountain silhouettes, evergreen trees, and a ring of binary code encoding "kafkade.PNW". Papery texture via SVG noise filter. Used as profile picture across all platforms.
+**Beetle circuit seal** — extracted from the k4 illustration. A circular medallion featuring a stylized beetle with circuit-board trace patterns on its wings, set against a PNW landscape (mountains, evergreen trees, rain, swirling clouds) with a binary code border ring. The seal captures Kafka's *Metamorphosis* through the beetle motif and the Cascades through the Pacific Northwest scenery.
 
-File: `brand/social/avatar-512.svg` (512×512, works for all platforms)
+Source: `brand/tmp/k4.png` (original illustration)
+Files:
+- `brand/social/avatar-512.png` (512×512, circular with transparency)
+- `public/favicon-32.png` (32×32 favicon)
+- `public/apple-touch-icon.png` (180×180)
+- `public/icon-192.png` (192×192)
 
 ---
 
 ## Logo Concept
 
-**Beetle circuit mark** — simplified beetle with circuit traces and amber accent nodes, set in a midnight circle. At favicon scale (32×32), reduces to a teal beetle silhouette with amber circuit traces. Not displayed on the website itself (the name "kafkade" in monospace is the primary mark).
+The **beetle circuit seal** from k4 IS the logo. At favicon scale, the beetle silhouette remains recognizable. The seal is not displayed on the website itself — the name "kafkade" in monospace is the primary text mark. The paper texture from the k4 background is used as the website background.
 
 ---
 

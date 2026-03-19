@@ -14,18 +14,18 @@ const projects = [
 
 <PageLayout title="Projects — kafkade" description="Software projects and open source work by kafkade.">
   <section class="py-8">
-    <h1 class="text-[1.4rem] font-bold mb-2">Projects</h1>
-    <p class="text-[0.85rem] text-[--color-text-muted] mb-8">
+    <h1 class="text-[1.5rem] font-bold mb-2">Projects</h1>
+    <p class="text-[0.9rem] text-[--color-text-muted] mb-8">
       Things I've built, am building, or plan to build.
     </p>
 
     {projects.map((project) => (
       <div class="mb-6">
-        <h3 class="text-[1rem] font-semibold mb-1">
+        <h3 class="text-[1.05rem] font-semibold mb-1">
           <a href={project.url || project.repo} class="accent">{project.name}</a>
         </h3>
-        <p class="text-[0.8rem] text-[--color-sage] mb-1">{project.tags.join(' · ')}</p>
-        <p class="text-[0.85rem] text-[--color-text-muted] leading-relaxed">{project.description}</p>
+        <p class="text-[0.85rem] text-[--color-sage] mb-1">{project.tags.join(' · ')}</p>
+        <p class="text-[0.9rem] text-[--color-text-muted] leading-relaxed">{project.description}</p>
       </div>
     ))}
   </section>

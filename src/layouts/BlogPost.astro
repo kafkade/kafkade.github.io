@@ -32,17 +32,17 @@ const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
   <main class="flex-1 max-w-[720px] mx-auto w-full px-6">
     <article class="py-8">
       <header class="mb-8">
-        <h1 class="text-[1.6rem] sm:text-[2rem] font-bold leading-tight mb-3">
+        <h1 class="text-[1.7rem] sm:text-[2.1rem] font-bold leading-tight mb-3">
           {title}
         </h1>
-        <div class="text-[0.8rem] text-[--color-sage]">
+        <div class="text-[0.85rem] text-[--color-sage]">
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
           {updatedDate && (
             <span> · Updated {formattedUpdate}</span>
           )}
         </div>
         {tags.length > 0 && (
-          <div class="mt-2 text-[0.8rem] text-[--color-sage]">
+          <div class="mt-2 text-[0.85rem] text-[--color-sage]">
             {tags.join(' · ')}
           </div>
         )}
@@ -60,11 +60,11 @@ const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
   .prose {
     line-height: 1.75;
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .prose :global(h2) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-top: 2.5rem;
     margin-bottom: 0.75rem;
@@ -72,7 +72,7 @@ const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
   }
 
   .prose :global(h3) {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     margin-top: 2rem;
     margin-bottom: 0.5rem;

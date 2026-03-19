@@ -1,0 +1,62 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check-sites:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check production site
+        id: prod
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 https://kafkade.com)
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          if [ "$STATUS" != "200" ]; then
+            echo "::warning::Production site returned HTTP $STATUS"
+          fi
+
+      - name: Check beta site
+        id: beta
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 30 https://beta.kafkade.pages.dev)
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          if [ "$STATUS" != "200" ]; then
+            echo "::warning::Beta site returned HTTP $STATUS"
+          fi
+
+      - name: Update status badges
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        if: always()
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gistID: ${{ vars.STATUS_GIST_ID }}
+          filename: kafkade-status.json
+          label: kafkade.com
+          message: ${{ steps.prod.outputs.status == '200' && 'online' || 'down' }}
+          color: ${{ steps.prod.outputs.status == '200' && 'brightgreen' || 'red' }}
+          namedLogo: cloudflare
+
+      - name: Update beta status badge
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        if: always()
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gistID: ${{ vars.STATUS_GIST_ID }}
+          filename: kafkade-beta-status.json
+          label: beta
+          message: ${{ steps.beta.outputs.status == '200' && 'online' || 'down' }}
+          color: ${{ steps.beta.outputs.status == '200' && 'brightgreen' || 'red' }}
+          namedLogo: cloudflare
+
+      - name: Fail if any site is down
+        if: steps.prod.outputs.status != '200' || steps.beta.outputs.status != '200'
+        run: |
+          echo "One or more sites are not responding with HTTP 200"
+          echo "Production: ${{ steps.prod.outputs.status }}"
+          echo "Beta: ${{ steps.beta.outputs.status }}"
+          exit 1

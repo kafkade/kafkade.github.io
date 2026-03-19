@@ -18,14 +18,14 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 
 <a href={`/blog/${slug}`} class="block no-invert mb-6">
   <article>
-    <h3 class="text-[1rem] font-semibold mb-1">
+    <h3 class="text-[1.05rem] font-semibold mb-1">
       <span class="accent underline decoration-2 underline-offset-[3px] decoration-[--color-ember]">{title}</span>
     </h3>
-    <p class="text-[0.8rem] text-[--color-sage] mb-1">
+    <p class="text-[0.85rem] text-[--color-sage] mb-1">
       <time datetime={pubDate.toISOString()}>{formattedDate}</time>
       {tags.length > 0 && ` · ${tags.join(' · ')}`}
     </p>
-    <p class="text-[0.85rem] text-[--color-text-muted] leading-relaxed">
+    <p class="text-[0.9rem] text-[--color-text-muted] leading-relaxed">
       {description}
     </p>
   </article>
