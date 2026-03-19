@@ -61,7 +61,7 @@ Inspired by [マリウス (xn--gckvb8fzb.com)](https://xn--gckvb8fzb.com/):
 
 ## Avatar
 
-**Terminal design** — a terminal window on midnight background with colored code lines (ember, teal, amber, sage) and a blinking cursor. Used as profile picture across all platforms.
+**Beetle circuit medallion** — a circular medallion on midnight background featuring a beetle (Kafka's *Metamorphosis*) with circuit-board trace patterns on its wings. The scene includes PNW mountain silhouettes, evergreen trees, and a ring of binary code encoding "kafkade.PNW". Papery texture via SVG noise filter. Used as profile picture across all platforms.
 
 File: `brand/social/avatar-512.svg` (512×512, works for all platforms)
 
@@ -69,7 +69,7 @@ File: `brand/social/avatar-512.svg` (512×512, works for all platforms)
 
 ## Logo Concept
 
-**Stacked chevrons** — nested V shapes receding into distance with an amber dot summit. Used in social banners and as a subtle watermark. Not displayed on the website itself (the name "kafkade" in monospace is the primary mark).
+**Beetle circuit mark** — simplified beetle with circuit traces and amber accent nodes, set in a midnight circle. At favicon scale (32×32), reduces to a teal beetle silhouette with amber circuit traces. Not displayed on the website itself (the name "kafkade" in monospace is the primary mark).
 
 ---
 
@@ -81,6 +81,8 @@ All assets in `brand/social/`:
 |----------------|-------------|-------------------|
 | X / Twitter     | avatar-512  | 1500×500          |
 | Bluesky         | avatar-512  | 1500×500          |
+| Facebook        | avatar-512  | 820×312           |
+| LinkedIn        | avatar-512  | 1584×396          |
 | Instagram       | avatar-512  | N/A               |
 | GitHub          | avatar-512  | 1280×640          |
 | Patreon         | avatar-512  | 1600×400          |

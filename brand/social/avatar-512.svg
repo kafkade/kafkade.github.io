@@ -1,45 +1,147 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Profile avatar — Terminal design. Use for all platforms. -->
+  <!-- Profile avatar — Beetle circuit medallion. Kafka + PNW. -->
+  <defs>
+    <!-- Papery texture filter -->
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="2" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+      <feBlend in="SourceGraphic" in2="grey" mode="multiply" result="blend"/>
+      <feComponentTransfer in="blend">
+        <feFuncA type="linear" slope="1" intercept="0"/>
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Circular clip for the scene -->
+    <clipPath id="medallion">
+      <circle cx="256" cy="256" r="210"/>
+    </clipPath>
+
+    <!-- Binary ring text path -->
+    <path id="binaryRing" d="M 256,256 m -228,0 a 228,228 0 1,1 456,0 a 228,228 0 1,1 -456,0" fill="none"/>
+  </defs>
+
+  <!-- Background -->
   <rect width="512" height="512" rx="64" fill="#010221"/>
 
-  <!-- Terminal window -->
-  <rect x="76" y="100" width="360" height="312" rx="20" fill="#0A7373" opacity="0.15"/>
-  <rect x="76" y="100" width="360" height="48" rx="20" fill="#0A7373" opacity="0.25"/>
-  <rect x="76" y="130" width="360" height="282" rx="0" fill="#0A7373" opacity="0.15"/>
-  <rect x="76" y="392" width="360" height="20" rx="0 0 20 20" fill="#0A7373" opacity="0.15"/>
+  <!-- Outer ring border -->
+  <circle cx="256" cy="256" r="238" fill="none" stroke="#0A7373" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="256" cy="256" r="212" fill="none" stroke="#0A7373" stroke-width="1" opacity="0.2"/>
 
-  <!-- Window control dots -->
-  <circle cx="112" cy="124" r="8" fill="#C43302" opacity="0.85"/>
-  <circle cx="138" cy="124" r="8" fill="#EDAA25" opacity="0.85"/>
-  <circle cx="164" cy="124" r="8" fill="#0A7373" opacity="0.85"/>
+  <!-- Binary code ring -->
+  <text font-family="monospace" font-size="9" fill="#B7BF99" opacity="0.4">
+    <textPath href="#binaryRing" startOffset="0%">01001011 01100001 01100110 01101011 01100001 01100100 01100101 00101110 01010000 01001110 01010111 00101110 </textPath>
+  </text>
 
-  <!-- Terminal text lines -->
-  <rect x="108" y="170" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="170" width="130" height="8" rx="2" fill="#E8E8E0" opacity="0.5"/>
+  <!-- Scene inside medallion -->
+  <g clip-path="url(#medallion)" filter="url(#paper)">
+    <!-- Scene background gradient — night sky -->
+    <rect x="46" y="46" width="420" height="420" fill="#010221"/>
 
-  <rect x="108" y="196" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="196" width="90" height="8" rx="2" fill="#EDAA25" opacity="0.65"/>
+    <!-- Stars -->
+    <circle cx="120" cy="100" r="1" fill="#E8E8E0" opacity="0.4"/>
+    <circle cx="310" cy="80" r="1.2" fill="#E8E8E0" opacity="0.3"/>
+    <circle cx="200" cy="70" r="0.8" fill="#E8E8E0" opacity="0.5"/>
+    <circle cx="380" cy="110" r="1" fill="#E8E8E0" opacity="0.35"/>
+    <circle cx="150" cy="130" r="0.7" fill="#EDAA25" opacity="0.4"/>
+    <circle cx="340" cy="140" r="0.9" fill="#E8E8E0" opacity="0.3"/>
 
-  <rect x="108" y="222" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="222" width="160" height="8" rx="2" fill="#C43302" opacity="0.55"/>
+    <!-- Swirling clouds / rain suggestion — thin arcs -->
+    <path d="M 80,150 Q 180,130 280,155 Q 350,165 420,145" stroke="#0A7373" stroke-width="0.8" fill="none" opacity="0.15"/>
+    <path d="M 60,170 Q 160,155 260,175 Q 340,185 440,160" stroke="#0A7373" stroke-width="0.6" fill="none" opacity="0.1"/>
 
-  <rect x="108" y="248" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="248" width="55" height="8" rx="2" fill="#0A7373" opacity="0.7"/>
+    <!-- Mountain range — Cascades -->
+    <path d="M 46,380 L 100,290 L 140,320 L 195,260 L 240,300 L 290,240 L 340,285 L 380,250 L 420,280 L 466,310 L 466,380 Z" fill="#0A7373" opacity="0.25"/>
+    <path d="M 46,380 L 110,310 L 160,340 L 220,280 L 270,315 L 310,275 L 360,305 L 400,270 L 466,320 L 466,380 Z" fill="#0A7373" opacity="0.15"/>
 
-  <rect x="108" y="274" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="274" width="120" height="8" rx="2" fill="#E8E8E0" opacity="0.4"/>
+    <!-- Snow caps -->
+    <path d="M 195,260 L 205,275 L 185,275 Z" fill="#E8E8E0" opacity="0.15"/>
+    <path d="M 290,240 L 302,258 L 278,258 Z" fill="#E8E8E0" opacity="0.15"/>
+    <path d="M 380,250 L 390,265 L 370,265 Z" fill="#E8E8E0" opacity="0.12"/>
 
-  <rect x="108" y="300" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="300" width="75" height="8" rx="2" fill="#EDAA25" opacity="0.5"/>
+    <!-- Evergreen trees — simple triangular silhouettes -->
+    <polygon points="105,380 112,340 119,380" fill="#0A7373" opacity="0.35"/>
+    <polygon points="130,380 138,330 146,380" fill="#0A7373" opacity="0.3"/>
+    <polygon points="370,380 378,335 386,380" fill="#0A7373" opacity="0.3"/>
+    <polygon points="395,380 402,345 409,380" fill="#0A7373" opacity="0.25"/>
+    <polygon points="85,380 91,355 97,380" fill="#0A7373" opacity="0.2"/>
+    <polygon points="415,380 420,355 425,380" fill="#0A7373" opacity="0.2"/>
 
-  <rect x="108" y="326" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="326" width="180" height="8" rx="2" fill="#0A7373" opacity="0.5"/>
+    <!-- ===== BEETLE ===== -->
+    <g transform="translate(256, 235)">
+      <!-- Antennae -->
+      <path d="M -8,-62 Q -20,-85 -30,-95" stroke="#B7BF99" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <path d="M 8,-62 Q 20,-85 30,-95" stroke="#B7BF99" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+      <circle cx="-30" cy="-95" r="2.5" fill="#EDAA25" opacity="0.8"/>
+      <circle cx="30" cy="-95" r="2.5" fill="#EDAA25" opacity="0.8"/>
 
-  <!-- Cursor line -->
-  <rect x="108" y="358" width="22" height="8" rx="2" fill="#B7BF99" opacity="0.75"/>
-  <rect x="140" y="358" width="8" height="8" rx="1" fill="#EDAA25"/>
+      <!-- Head -->
+      <ellipse cx="0" cy="-55" rx="14" ry="12" fill="#1A1A2E" stroke="#0A7373" stroke-width="1" opacity="0.9"/>
 
-  <!-- Stacked chevrons watermark bottom -->
-  <path d="M 206,440 L 256,418 L 306,440" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.15"/>
-  <path d="M 216,448 L 256,430 L 296,448" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+      <!-- Pronotum (thorax shield) -->
+      <ellipse cx="0" cy="-38" rx="22" ry="14" fill="#1A1A2E" stroke="#0A7373" stroke-width="1" opacity="0.9"/>
+
+      <!-- Legs — 3 pairs -->
+      <line x1="-22" y1="-38" x2="-45" y2="-55" stroke="#B7BF99" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+      <line x1="22" y1="-38" x2="45" y2="-55" stroke="#B7BF99" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+      <line x1="-28" y1="-10" x2="-52" y2="-15" stroke="#B7BF99" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+      <line x1="28" y1="-10" x2="52" y2="-15" stroke="#B7BF99" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+      <line x1="-25" y1="25" x2="-50" y2="35" stroke="#B7BF99" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+      <line x1="25" y1="25" x2="50" y2="35" stroke="#B7BF99" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+
+      <!-- Elytra (wing cases) — left -->
+      <path d="M -3,-26 Q -35,-20 -35,15 Q -35,55 -8,70 L -3,70 L -3,-26 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="1.2"/>
+
+      <!-- Elytra — right -->
+      <path d="M 3,-26 Q 35,-20 35,15 Q 35,55 8,70 L 3,70 L 3,-26 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="1.2"/>
+
+      <!-- === Circuit traces on LEFT wing === -->
+      <!-- Main vertical trace -->
+      <line x1="-18" y1="-15" x2="-18" y2="50" stroke="#0A7373" stroke-width="1" opacity="0.7"/>
+      <!-- Horizontal branches -->
+      <line x1="-18" y1="-5" x2="-28" y2="-5" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+      <line x1="-18" y1="15" x2="-30" y2="15" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+      <line x1="-18" y1="30" x2="-26" y2="30" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+      <line x1="-18" y1="42" x2="-24" y2="42" stroke="#0A7373" stroke-width="0.8" opacity="0.5"/>
+      <!-- Diagonal trace -->
+      <line x1="-10" y1="-18" x2="-25" y2="5" stroke="#C43302" stroke-width="0.8" opacity="0.5"/>
+      <!-- Circuit nodes (PCB pads) -->
+      <circle cx="-18" cy="-15" r="2" fill="#EDAA25" opacity="0.8"/>
+      <circle cx="-28" cy="-5" r="1.5" fill="#0A7373" opacity="0.8"/>
+      <circle cx="-30" cy="15" r="1.5" fill="#C43302" opacity="0.7"/>
+      <circle cx="-18" cy="30" r="2" fill="#EDAA25" opacity="0.7"/>
+      <circle cx="-18" cy="50" r="1.5" fill="#0A7373" opacity="0.6"/>
+
+      <!-- === Circuit traces on RIGHT wing === -->
+      <!-- Main vertical trace -->
+      <line x1="18" y1="-15" x2="18" y2="50" stroke="#0A7373" stroke-width="1" opacity="0.7"/>
+      <!-- Horizontal branches -->
+      <line x1="18" y1="-5" x2="28" y2="-5" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+      <line x1="18" y1="15" x2="30" y2="15" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+      <line x1="18" y1="30" x2="26" y2="30" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+      <line x1="18" y1="42" x2="24" y2="42" stroke="#0A7373" stroke-width="0.8" opacity="0.5"/>
+      <!-- Diagonal trace -->
+      <line x1="10" y1="-18" x2="25" y2="5" stroke="#C43302" stroke-width="0.8" opacity="0.5"/>
+      <!-- Circuit nodes -->
+      <circle cx="18" cy="-15" r="2" fill="#EDAA25" opacity="0.8"/>
+      <circle cx="28" cy="-5" r="1.5" fill="#0A7373" opacity="0.8"/>
+      <circle cx="30" cy="15" r="1.5" fill="#C43302" opacity="0.7"/>
+      <circle cx="18" cy="30" r="2" fill="#EDAA25" opacity="0.7"/>
+      <circle cx="18" cy="50" r="1.5" fill="#0A7373" opacity="0.6"/>
+
+      <!-- Center line (elytra seam) -->
+      <line x1="0" y1="-26" x2="0" y2="70" stroke="#0A7373" stroke-width="0.6" opacity="0.4"/>
+    </g>
+
+    <!-- Rain lines — subtle -->
+    <line x1="160" y1="100" x2="155" y2="130" stroke="#B7BF99" stroke-width="0.5" opacity="0.12"/>
+    <line x1="330" y1="110" x2="325" y2="140" stroke="#B7BF99" stroke-width="0.5" opacity="0.1"/>
+    <line x1="420" y1="130" x2="415" y2="160" stroke="#B7BF99" stroke-width="0.5" opacity="0.1"/>
+    <line x1="90" y1="120" x2="85" y2="150" stroke="#B7BF99" stroke-width="0.5" opacity="0.08"/>
+  </g>
+
+  <!-- Amber accent dots at cardinal points of outer ring -->
+  <circle cx="256" cy="18" r="3" fill="#EDAA25" opacity="0.6"/>
+  <circle cx="256" cy="494" r="3" fill="#EDAA25" opacity="0.6"/>
+  <circle cx="18" cy="256" r="3" fill="#EDAA25" opacity="0.6"/>
+  <circle cx="494" cy="256" r="3" fill="#EDAA25" opacity="0.6"/>
 </svg>
