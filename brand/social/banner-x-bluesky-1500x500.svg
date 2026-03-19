@@ -1,40 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
-  <!-- Banner for X (Twitter) and Bluesky — 1500x500 -->
+  <!-- Banner for X (Twitter) and Bluesky — 1500x500 — Beetle Circuit -->
+  <defs>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" seed="7" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+      <feBlend in="SourceGraphic" in2="grey" mode="multiply"/>
+    </filter>
+    <clipPath id="medal"><circle cx="250" cy="250" r="160"/></clipPath>
+    <path id="ring" d="M 250,250 m -175,0 a 175,175 0 1,1 350,0 a 175,175 0 1,1 -350,0" fill="none"/>
+  </defs>
+
   <rect width="1500" height="500" fill="#010221"/>
 
-  <!-- Subtle mountain range background -->
-  <path d="M 0,500 L 200,320 L 350,400 L 550,280 L 700,360 L 900,250 L 1050,340 L 1200,270 L 1350,350 L 1500,300 L 1500,500 Z" fill="#0A7373" opacity="0.06"/>
+  <!-- Mountain range background spanning full width -->
+  <path d="M 0,500 L 150,360 L 300,420 L 500,320 L 700,400 L 900,310 L 1050,380 L 1200,300 L 1350,370 L 1500,340 L 1500,500 Z" fill="#0A7373" opacity="0.06"/>
+  <path d="M 0,500 L 200,380 L 400,450 L 600,350 L 800,430 L 1000,340 L 1200,390 L 1400,350 L 1500,370 L 1500,500 Z" fill="#0A7373" opacity="0.03"/>
 
-  <!-- Terminal window (left side) -->
-  <rect x="80" y="100" width="440" height="300" rx="16" fill="#0A7373" opacity="0.12"/>
-  <rect x="80" y="100" width="440" height="36" rx="16" fill="#0A7373" opacity="0.2"/>
-  <rect x="80" y="124" width="440" height="276" fill="#0A7373" opacity="0.12"/>
-  <circle cx="106" cy="118" r="6" fill="#C43302" opacity="0.8"/>
-  <circle cx="126" cy="118" r="6" fill="#EDAA25" opacity="0.8"/>
-  <circle cx="146" cy="118" r="6" fill="#0A7373" opacity="0.8"/>
+  <!-- Beetle medallion (left side) -->
+  <g filter="url(#paper)">
+    <!-- Outer ring -->
+    <circle cx="250" cy="250" r="180" fill="none" stroke="#0A7373" stroke-width="1" opacity="0.3"/>
+    <circle cx="250" cy="250" r="162" fill="none" stroke="#0A7373" stroke-width="0.8" opacity="0.2"/>
 
-  <!-- Terminal code lines -->
-  <rect x="108" y="152" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="132" y="152" width="100" height="6" rx="1" fill="#E8E8E0" opacity="0.4"/>
-  <rect x="108" y="172" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="132" y="172" width="70" height="6" rx="1" fill="#EDAA25" opacity="0.5"/>
-  <rect x="108" y="192" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="132" y="192" width="130" height="6" rx="1" fill="#C43302" opacity="0.4"/>
-  <rect x="108" y="212" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="132" y="212" width="45" height="6" rx="1" fill="#0A7373" opacity="0.6"/>
-  <rect x="108" y="232" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="132" y="232" width="90" height="6" rx="1" fill="#E8E8E0" opacity="0.35"/>
-  <rect x="108" y="252" width="16" height="6" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="132" y="252" width="6" height="6" rx="1" fill="#EDAA25"/>
+    <!-- Binary ring -->
+    <text font-family="monospace" font-size="7" fill="#B7BF99" opacity="0.35">
+      <textPath href="#ring" startOffset="0%">01001011 01100001 01100110 01101011 01100001 01100100 01100101 00101110 01010000 01001110 01010111 </textPath>
+    </text>
+
+    <!-- Scene inside medallion -->
+    <g clip-path="url(#medal)">
+      <rect x="70" y="70" width="360" height="360" fill="#010221"/>
+
+      <!-- Mountains -->
+      <path d="M 90,380 L 140,310 L 180,340 L 230,280 L 270,310 L 310,260 L 350,295 L 390,270 L 410,300 L 410,380 Z" fill="#0A7373" opacity="0.2"/>
+
+      <!-- Trees -->
+      <polygon points="110,380 116,350 122,380" fill="#0A7373" opacity="0.25"/>
+      <polygon points="370,380 377,345 384,380" fill="#0A7373" opacity="0.25"/>
+
+      <!-- Beetle -->
+      <g transform="translate(250, 230)">
+        <path d="M -6,-48 Q -16,-65 -24,-72" stroke="#B7BF99" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <path d="M 6,-48 Q 16,-65 24,-72" stroke="#B7BF99" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="-24" cy="-72" r="2" fill="#EDAA25" opacity="0.8"/>
+        <circle cx="24" cy="-72" r="2" fill="#EDAA25" opacity="0.8"/>
+        <ellipse cx="0" cy="-42" rx="11" ry="9" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.8"/>
+        <ellipse cx="0" cy="-28" rx="17" ry="11" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.8"/>
+        <path d="M -2,-20 Q -28,-15 -28,10 Q -28,42 -6,54 L -2,54 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="1"/>
+        <path d="M 2,-20 Q 28,-15 28,10 Q 28,42 6,54 L 2,54 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="1"/>
+        <line x1="-14" y1="-10" x2="-14" y2="38" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+        <line x1="14" y1="-10" x2="14" y2="38" stroke="#0A7373" stroke-width="0.8" opacity="0.6"/>
+        <line x1="-14" y1="0" x2="-22" y2="0" stroke="#0A7373" stroke-width="0.6" opacity="0.5"/>
+        <line x1="14" y1="0" x2="22" y2="0" stroke="#0A7373" stroke-width="0.6" opacity="0.5"/>
+        <line x1="-14" y1="15" x2="-24" y2="15" stroke="#0A7373" stroke-width="0.6" opacity="0.5"/>
+        <line x1="14" y1="15" x2="24" y2="15" stroke="#0A7373" stroke-width="0.6" opacity="0.5"/>
+        <circle cx="-14" cy="-10" r="1.5" fill="#EDAA25" opacity="0.7"/>
+        <circle cx="14" cy="-10" r="1.5" fill="#EDAA25" opacity="0.7"/>
+        <circle cx="-14" cy="25" r="1.5" fill="#C43302" opacity="0.6"/>
+        <circle cx="14" cy="25" r="1.5" fill="#C43302" opacity="0.6"/>
+        <line x1="0" y1="-20" x2="0" y2="54" stroke="#0A7373" stroke-width="0.5" opacity="0.3"/>
+      </g>
+    </g>
+
+    <!-- Cardinal accent dots -->
+    <circle cx="250" cy="68" r="2.5" fill="#EDAA25" opacity="0.5"/>
+    <circle cx="250" cy="432" r="2.5" fill="#EDAA25" opacity="0.5"/>
+  </g>
 
   <!-- Name and tagline (right side) -->
-  <text x="650" y="230" font-family="monospace" font-size="64" font-weight="700" fill="#E8E8E0">kafkade</text>
-  <text x="650" y="280" font-family="monospace" font-size="22" fill="#C43302">software, systems, and other things</text>
+  <text x="520" y="235" font-family="monospace" font-size="64" font-weight="700" fill="#E8E8E0">kafkade</text>
+  <text x="520" y="285" font-family="monospace" font-size="22" fill="#C43302">software, systems, and other things</text>
 
-  <!-- Stacked chevrons (far right) -->
-  <path d="M 1280,300 L 1340,260 L 1400,300" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.15"/>
-  <path d="M 1290,280 L 1340,248 L 1390,280" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
-  <path d="M 1300,260 L 1340,236 L 1380,260" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 1310,240 L 1340,222 L 1370,240" stroke="#0A7373" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-  <circle cx="1340" cy="218" r="4" fill="#EDAA25"/>
+  <!-- Subtle binary accent (far right) -->
+  <text x="1200" y="440" font-family="monospace" font-size="8" fill="#B7BF99" opacity="0.15">01001011 01010000 01001110 01010111</text>
 </svg>

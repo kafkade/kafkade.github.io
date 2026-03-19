@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 312" width="820" height="312">
+  <!-- Banner for Facebook — 820x312 — Beetle Circuit -->
+  <defs>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" seed="17" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+      <feBlend in="SourceGraphic" in2="grey" mode="multiply"/>
+    </filter>
+    <clipPath id="medal"><circle cx="156" cy="156" r="108"/></clipPath>
+    <path id="ring" d="M 156,156 m -120,0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0" fill="none"/>
+  </defs>
+
+  <rect width="820" height="312" fill="#010221"/>
+  <path d="M 0,312 L 130,250 L 260,280 L 400,220 L 530,260 L 660,220 L 820,250 L 820,312 Z" fill="#0A7373" opacity="0.05"/>
+
+  <!-- Beetle medallion (left) -->
+  <g filter="url(#paper)">
+    <circle cx="156" cy="156" r="122" fill="none" stroke="#0A7373" stroke-width="0.8" opacity="0.3"/>
+    <circle cx="156" cy="156" r="110" fill="none" stroke="#0A7373" stroke-width="0.6" opacity="0.2"/>
+    <text font-family="monospace" font-size="5" fill="#B7BF99" opacity="0.3">
+      <textPath href="#ring" startOffset="0%">01001011 01100001 01100110 01101011 01100001 01100100 01100101 00101110 01010000 01001110 01010111 </textPath>
+    </text>
+    <g clip-path="url(#medal)">
+      <rect x="36" y="36" width="240" height="240" fill="#010221"/>
+      <path d="M 48,260 L 80,215 L 120,240 L 160,200 L 200,225 L 240,195 L 264,210 L 264,260 Z" fill="#0A7373" opacity="0.2"/>
+      <g transform="translate(156, 145)">
+        <path d="M -4,-32 Q -11,-45 -16,-50" stroke="#B7BF99" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <path d="M 4,-32 Q 11,-45 16,-50" stroke="#B7BF99" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="-16" cy="-50" r="1.5" fill="#EDAA25" opacity="0.8"/>
+        <circle cx="16" cy="-50" r="1.5" fill="#EDAA25" opacity="0.8"/>
+        <ellipse cx="0" cy="-28" rx="7" ry="5.5" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.7"/>
+        <ellipse cx="0" cy="-19" rx="11" ry="7" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.7"/>
+        <path d="M -1.5,-14 Q -18,-11 -18,6 Q -18,28 -4,36 L -1.5,36 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.7"/>
+        <path d="M 1.5,-14 Q 18,-11 18,6 Q 18,28 4,36 L 1.5,36 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.7"/>
+        <line x1="-9" y1="-6" x2="-9" y2="25" stroke="#0A7373" stroke-width="0.6" opacity="0.6"/>
+        <line x1="9" y1="-6" x2="9" y2="25" stroke="#0A7373" stroke-width="0.6" opacity="0.6"/>
+        <circle cx="-9" cy="-6" r="1.2" fill="#EDAA25" opacity="0.7"/>
+        <circle cx="9" cy="-6" r="1.2" fill="#EDAA25" opacity="0.7"/>
+        <circle cx="-9" cy="16" r="1.2" fill="#C43302" opacity="0.6"/>
+        <circle cx="9" cy="16" r="1.2" fill="#C43302" opacity="0.6"/>
+        <line x1="0" y1="-14" x2="0" y2="36" stroke="#0A7373" stroke-width="0.3" opacity="0.3"/>
+      </g>
+    </g>
+    <circle cx="156" cy="34" r="1.8" fill="#EDAA25" opacity="0.5"/>
+    <circle cx="156" cy="278" r="1.8" fill="#EDAA25" opacity="0.5"/>
+  </g>
+
+  <!-- Name + tagline -->
+  <text x="330" y="148" font-family="monospace" font-size="44" font-weight="700" fill="#E8E8E0">kafkade</text>
+  <text x="330" y="185" font-family="monospace" font-size="15" fill="#C43302">software, systems, and other things</text>
+</svg>

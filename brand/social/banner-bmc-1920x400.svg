@@ -1,36 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" width="1920" height="400">
-  <!-- Banner for Buy Me a Coffee — 1920x400 -->
+  <!-- Banner for Buy Me a Coffee — 1920x400 — Beetle Circuit -->
+  <defs>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" seed="11" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+      <feBlend in="SourceGraphic" in2="grey" mode="multiply"/>
+    </filter>
+    <clipPath id="medal"><circle cx="200" cy="200" r="140"/></clipPath>
+    <path id="ring" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0" fill="none"/>
+  </defs>
+
   <rect width="1920" height="400" fill="#010221"/>
+  <path d="M 0,400 L 300,300 L 500,350 L 750,260 L 950,320 L 1150,250 L 1400,310 L 1650,270 L 1920,310 L 1920,400 Z" fill="#0A7373" opacity="0.05"/>
 
-  <!-- Mountain range -->
-  <path d="M 0,400 L 300,280 L 500,340 L 750,230 L 950,310 L 1150,220 L 1400,290 L 1650,250 L 1920,300 L 1920,400 Z" fill="#0A7373" opacity="0.06"/>
-
-  <!-- Terminal (left) -->
-  <rect x="100" y="55" width="420" height="290" rx="14" fill="#0A7373" opacity="0.12"/>
-  <rect x="100" y="55" width="420" height="32" rx="14" fill="#0A7373" opacity="0.2"/>
-  <rect x="100" y="77" width="420" height="268" fill="#0A7373" opacity="0.12"/>
-  <circle cx="124" cy="71" r="5" fill="#C43302" opacity="0.8"/>
-  <circle cx="140" cy="71" r="5" fill="#EDAA25" opacity="0.8"/>
-  <circle cx="156" cy="71" r="5" fill="#0A7373" opacity="0.8"/>
-  <rect x="126" y="98" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="146" y="98" width="90" height="5" rx="1" fill="#E8E8E0" opacity="0.4"/>
-  <rect x="126" y="112" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="146" y="112" width="60" height="5" rx="1" fill="#EDAA25" opacity="0.5"/>
-  <rect x="126" y="126" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="146" y="126" width="110" height="5" rx="1" fill="#C43302" opacity="0.4"/>
-  <rect x="126" y="140" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="146" y="140" width="40" height="5" rx="1" fill="#0A7373" opacity="0.6"/>
-  <rect x="126" y="154" width="14" height="5" rx="1" fill="#B7BF99" opacity="0.6"/>
-  <rect x="146" y="154" width="5" height="5" rx="1" fill="#EDAA25"/>
+  <!-- Beetle medallion (left) -->
+  <g filter="url(#paper)">
+    <circle cx="200" cy="200" r="158" fill="none" stroke="#0A7373" stroke-width="1" opacity="0.3"/>
+    <circle cx="200" cy="200" r="142" fill="none" stroke="#0A7373" stroke-width="0.7" opacity="0.2"/>
+    <text font-family="monospace" font-size="6" fill="#B7BF99" opacity="0.3">
+      <textPath href="#ring" startOffset="0%">01001011 01100001 01100110 01101011 01100001 01100100 01100101 00101110 01010000 01001110 01010111 </textPath>
+    </text>
+    <g clip-path="url(#medal)">
+      <rect x="40" y="40" width="320" height="320" fill="#010221"/>
+      <path d="M 60,340 L 100,280 L 140,310 L 190,260 L 230,290 L 270,240 L 310,270 L 340,250 L 340,340 Z" fill="#0A7373" opacity="0.2"/>
+      <g transform="translate(200, 185)">
+        <path d="M -5,-40 Q -14,-56 -20,-62" stroke="#B7BF99" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <path d="M 5,-40 Q 14,-56 20,-62" stroke="#B7BF99" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="-20" cy="-62" r="1.8" fill="#EDAA25" opacity="0.8"/>
+        <circle cx="20" cy="-62" r="1.8" fill="#EDAA25" opacity="0.8"/>
+        <ellipse cx="0" cy="-35" rx="9" ry="7" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.8"/>
+        <ellipse cx="0" cy="-24" rx="14" ry="9" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.8"/>
+        <path d="M -2,-17 Q -23,-13 -23,8 Q -23,36 -5,46 L -2,46 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.8"/>
+        <path d="M 2,-17 Q 23,-13 23,8 Q 23,36 5,46 L 2,46 Z" fill="#1A1A2E" stroke="#0A7373" stroke-width="0.8"/>
+        <line x1="-12" y1="-8" x2="-12" y2="32" stroke="#0A7373" stroke-width="0.7" opacity="0.6"/>
+        <line x1="12" y1="-8" x2="12" y2="32" stroke="#0A7373" stroke-width="0.7" opacity="0.6"/>
+        <circle cx="-12" cy="-8" r="1.5" fill="#EDAA25" opacity="0.7"/>
+        <circle cx="12" cy="-8" r="1.5" fill="#EDAA25" opacity="0.7"/>
+        <circle cx="-12" cy="20" r="1.5" fill="#C43302" opacity="0.6"/>
+        <circle cx="12" cy="20" r="1.5" fill="#C43302" opacity="0.6"/>
+        <line x1="0" y1="-17" x2="0" y2="46" stroke="#0A7373" stroke-width="0.4" opacity="0.3"/>
+      </g>
+    </g>
+    <circle cx="200" cy="42" r="2" fill="#EDAA25" opacity="0.5"/>
+    <circle cx="200" cy="358" r="2" fill="#EDAA25" opacity="0.5"/>
+  </g>
 
   <!-- Name + tagline (center) -->
-  <text x="660" y="195" font-family="monospace" font-size="56" font-weight="700" fill="#E8E8E0">kafkade</text>
-  <text x="660" y="238" font-family="monospace" font-size="20" fill="#C43302">software, systems, and other things</text>
+  <text x="460" y="195" font-family="monospace" font-size="56" font-weight="700" fill="#E8E8E0">kafkade</text>
+  <text x="460" y="238" font-family="monospace" font-size="20" fill="#C43302">software, systems, and other things</text>
 
-  <!-- Chevrons (right) -->
-  <path d="M 1680,250 L 1730,216 L 1780,250" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.15"/>
-  <path d="M 1688,234 L 1730,206 L 1772,234" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
-  <path d="M 1696,218 L 1730,196 L 1764,218" stroke="#0A7373" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
-  <path d="M 1704,202 L 1730,184 L 1756,202" stroke="#0A7373" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-  <circle cx="1730" cy="180" r="3.5" fill="#EDAA25"/>
+  <!-- Binary accent (far right) -->
+  <text x="1600" y="360" font-family="monospace" font-size="7" fill="#B7BF99" opacity="0.12">01001011 01010000 01001110 01010111</text>
 </svg>
