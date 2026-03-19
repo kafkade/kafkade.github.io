@@ -42,7 +42,8 @@ const environment: string = __ENVIRONMENT__;
     <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="kafkade" href="/rss.xml" />
@@ -55,9 +56,14 @@ const environment: string = __ENVIRONMENT__;
         Uses set:html because Astro does not interpolate expressions inside HTML comments. */}
     <Fragment set:html={`<!-- Environment: ${environment} -->`} />
 
-    <!-- Theme initialization — clear legacy dark preference, force light -->
+    <!-- Theme initialization — restore preference before first paint to prevent FOUC -->
     <script is:inline>
-      localStorage.removeItem('theme');
+      (function () {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
     </script>
   </head>
   <body class="min-h-screen flex flex-col antialiased">
