@@ -2,8 +2,8 @@
 
 ![CI](https://github.com/kafkade/kafkade/actions/workflows/ci.yml/badge.svg?branch=main)
 ![CI (beta)](https://github.com/kafkade/kafkade/actions/workflows/ci.yml/badge.svg?branch=beta)
-![Site Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/kafkade/5d358c9a40c3403252d072e54a9b96d5/raw/kafkade-status.json)
-![Beta Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/kafkade/5d358c9a40c3403252d072e54a9b96d5/raw/kafkade-beta-status.json)
+![Site Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/kafkade/5d358c9a40c3403252d072e54a9b96d5/raw/kafkade-status.json&cacheSeconds=300)
+![Beta Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/kafkade/5d358c9a40c3403252d072e54a9b96d5/raw/kafkade-beta-status.json&cacheSeconds=300)
 
 Personal website and portfolio for **kafkade** — a software creator building at the intersection of code and craft.
 
@@ -75,7 +75,11 @@ The health-check workflow writes badge data to a GitHub Gist. To enable:
 2. Create a fine-grained PAT with `gist` write scope.
 3. Add `GIST_TOKEN` as a repository secret.
 4. Add `STATUS_GIST_ID` as a repository variable (the Gist's ID from its URL).
-5. Replace `STATUS_GIST_ID` in the badge URLs in this README with the actual Gist ID.
+5. Replace the gist ID in the badge URLs in this README with your actual Gist ID.
+
+> **Note:** The status badges will show an error until the health-check workflow runs for the first time.
+> It triggers automatically when the workflow file is pushed to `main`, then every 30 minutes via cron.
+> You can also trigger it manually from **Actions → Health Check → Run workflow**.
 
 ## License
 
